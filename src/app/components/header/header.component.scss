@@ -1,0 +1,51 @@
+@media (min-width: 768px) {
+  .mobile-header {
+    display: none;
+  }
+
+  .header {
+    display: flex;
+    // background: var(--ion-color-tertiary-tint);
+    margin-bottom: 500px;
+    // padding-left: 40px;
+    //padding-right: 40px;
+    img {
+      height: auto;
+    }
+    ion-button {
+      color: var(--ion-color-dark);
+    }
+  }
+  .colflex {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-header {
+    display: block;
+  }
+
+  .header {
+    display: none;
+  }
+}
+
+.active-item {
+  // border-bottom: 2px solid var(--ion-color-primary);
+  background-color: var(--ion-color-warning);
+  color: white;
+}
+
+.dropdown {
+  width: 136px;
+  height: 150px;
+  background: #fff;
+  position: absolute;
+  top: 40px;
+  left: 400px;
+  z-index: 1;
+  ion-item:hover {
+    --ion-item-color: var(--ion-color-primary);
+  }
+}

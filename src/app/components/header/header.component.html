@@ -1,0 +1,227 @@
+<ion-header class="mobile-header">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="myMenu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ title }}</ion-title>
+    <ion-buttons slot="end"> </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-grid>
+  <ion-row>
+    <ion-col size="4" class="ion-align-self-center ion-padding colflex">
+      <div>
+        <ion-button fill="outline" color="primary">
+          TEL:+23722024356</ion-button
+        >
+      </div>
+      <div>
+        <ion-button
+          fill="outline"
+          color="primary"
+          routerLink="/contacts"
+          routerDirection="root"
+        >
+          {{ "MENU.Contact" | translate }}</ion-button
+        >
+      </div>
+    </ion-col>
+    <ion-col size="4">
+      <div class="ion-text-center">
+        <img src="../../../assets/logo.jpg" width="120px" />
+      </div>
+    </ion-col>
+    <ion-col size="4" class="ion-align-self-center colflex">
+      <div>
+        <ion-button fill="outline" color="danger">
+          GIVE IN HONOR & MEMORIAL</ion-button
+        >
+      </div>
+      <div>
+        <ion-button color="danger" routerLink="/donate" routerDirection="root">
+          <ion-icon slot="start" name="heart-outline"></ion-icon>
+          {{ "MENU.Donate" | translate }}</ion-button
+        >
+      </div>
+      <div>
+        <ion-button
+          #productbtn
+          (mouseenter)="dropdown = true"
+          (mouseleave)="hideDropdown($event)"
+          fill="clear"
+          routerDirection="root"
+          routerLinkActive="active-item"
+        >
+          {{ language }}
+          <ion-icon
+            slot="end"
+            [name]="dropdown ? 'chevron-down' : 'chevron-up'"
+          ></ion-icon>
+        </ion-button>
+        <div
+          *ngIf="dropdown"
+          class="dropdown"
+          (mouseleave)="dropdown = false"
+          #dropdownbox
+        >
+          <ion-item (click)="selectLanguage('fr')" lines="none">
+            FR
+            <ion-checkbox slot="end" [(ngModel)]="FR"></ion-checkbox>
+          </ion-item>
+          <ion-item (click)="selectLanguage('en')" lines="none">
+            EN
+            <ion-checkbox slot="end" [(ngModel)]="EN"></ion-checkbox>
+          </ion-item>
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row class="header ion-align-items-center">
+    <ion-col size="5" class="ion-align-items-center"> </ion-col>
+    <ion-col size="6" class="ion-text-left">
+      <ion-button
+        fill="clear"
+        routerLink="/"
+        routerDirection="root"
+        routerLinkActive="active-item"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        {{ "MENU.Home" | translate }}
+      </ion-button>
+      <!-- Button with dropdown 
+       <ion-button
+        #productbtn
+        (mouseenter)="dropdown = true"
+        (mouseleave)="hideDropdown($event)"
+        fill="clear"
+       
+        routerLink="/products"
+        routerDirection="root"
+        routerLinkActive="active-item"
+      >
+        Products
+        <ion-icon
+          slot="end"
+          [name]="dropdown ? 'chevron-down' : 'chevron-up'"
+        ></ion-icon>
+      </ion-button>
+      <div
+        *ngIf="dropdown"
+        class="dropdown"
+        (mouseleave)="dropdown = false"
+        #dropdownbox
+      >
+        <ion-item
+          (click)="dropdown = false"
+          routerLink="/products"
+          [queryParams]="{ category: 'popular' }"
+          lines="none"
+          routerDirection="root"
+        >
+          Popular
+        </ion-item>
+        <ion-item
+          (click)="dropdown = false"
+          button
+          routerLink="/products"
+          [queryParams]="{ category: 'cloth' }"
+          lines="none"
+          routerDirection="root"
+        >
+          Cloth
+        </ion-item>
+        <ion-item
+          (click)="dropdown = false"
+          button
+          routerLink="/products"
+          [queryParams]="{ category: 'gadgets' }"
+          lines="none"
+          routerDirection="root"
+        >
+          Gadgets
+        </ion-item>
+      </div>
+      
+      -->
+
+      <ion-button
+        fill="clear"
+        routerLink="/about"
+        routerDirection="root"
+        routerLinkActive="active-item"
+      >
+        {{ "MENU.About" | translate }}
+      </ion-button>
+
+      <ion-button
+        fill="clear"
+        routerLink="/activity"
+        routerDirection="root"
+        routerLinkActive="active-item"
+      >
+        {{ "MENU.Activity" | translate }}
+      </ion-button>
+      <ion-button
+        fill="clear"
+        routerLink="/impact"
+        routerDirection="root"
+        routerLinkActive="active-item"
+      >
+        {{ "MENU.Impact" | translate }}
+      </ion-button>
+
+      <!--
+        <ion-button
+        fill="clear"
+        routerLink="/contacts"
+        routerDirection="root"
+        routerLinkActive="active-item"
+      >
+        {{ "MENU.Contact" | translate }}
+      </ion-button>
+        <ion-button
+        fill="clear"
+        routerLink="/donate"
+        routerDirection="root"
+        routerLinkActive="active-item"
+      >
+        {{ "MENU.Donate" | translate }}
+      </ion-button>
+     -->
+    </ion-col>
+    <!--
+      <ion-col size="1" class="ion-text-right">
+      <ion-button
+        #productbtn
+        (mouseenter)="dropdown = true"
+        (mouseleave)="hideDropdown($event)"
+        fill="clear"
+        routerDirection="root"
+        routerLinkActive="active-item"
+      >
+        {{ language }}
+        <ion-icon
+          slot="end"
+          [name]="dropdown ? 'chevron-down' : 'chevron-up'"
+        ></ion-icon>
+      </ion-button>
+      <div
+        *ngIf="dropdown"
+        class="dropdown"
+        (mouseleave)="dropdown = false"
+        #dropdownbox
+      >
+        <ion-item (click)="selectLanguage('fr')" lines="none">
+          FR
+          <ion-checkbox slot="end" [(ngModel)]="FR"></ion-checkbox>
+        </ion-item>
+        <ion-item (click)="selectLanguage('en')" lines="none">
+          EN
+          <ion-checkbox slot="end" [(ngModel)]="EN"></ion-checkbox>
+        </ion-item>
+      </div>
+    </ion-col>
+    -->
+  </ion-row>
+</ion-grid>

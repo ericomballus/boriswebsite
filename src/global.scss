@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,19 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@media (min-width: 768px) {
+  ion-content {
+    // --background: #e9e9e9;
+    // --padding-end: 150px;
+    //  --padding-start: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  ion-content {
+    // --background: #e9e9e9;
+    // --padding-end: 200px;
+    // --padding-start: 200px;
+  }
+}
