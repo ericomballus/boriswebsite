@@ -1,6 +1,6 @@
 @media (min-width: 768px) {
   ion-router-outlet {
-    margin-top: 200px;
+    margin-top: 210px;
   }
 }
 
@@ -21,4 +21,7 @@
 .couleur {
   background: var(--ion-color-tertiary-tint);
   color: red;
+}
+app-header {
+  // background: var(--ion-color-tertiary-tint);
 }

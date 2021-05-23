@@ -1,70 +1,76 @@
-.hero {
-  background-image: url("../../../assets/boris/IMG-20210519-WA0030.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100%;
-  width: 97%;
-  transition: all 5s;
-  // border: 1px solid black;
-  margin: 25px;
-}
-.welcome {
-  font-size: 9px;
-  color: white;
-  font-weight: bold;
-  margin: auto;
-  width: 100%;
-  padding: auto;
+.content {
+  --padding-bottom: 0px;
+  --padding-top: 0px;
+  margin: 0px;
+  background-color: yellow;
   position: relative;
-  top: 40%;
-  // left: 45%;
-  text-align: center;
+  //bottom: 500px;
 }
 @media (min-width: 768px) {
-  .hero {
-    margin: 25px;
+  .section2 {
+    left: 160px;
+    height: 23% !important;
+    width: 80%;
+    ion-col {
+      .section2div {
+        display: flex;
+        height: 100% !important;
+        justify-content: space-between;
+        div {
+          flex-basis: 100%;
+          // text-align: center;
+          //  border: 1px solid black;
+          color: black;
+          img {
+            border-radius: 50%;
+            height: 100% !important;
+            object-fit: cover;
+            width: 80% !important;
+          }
+        }
+      }
+    }
   }
-  .nomdusite {
-    color: black;
-    font-weight: bold;
-    font-size: 20px;
+  .section1text {
+    font-size: 50px;
   }
-  .firstimage {
-    font-weight: bold;
-    // width: 100% !important;
-    height: 110px;
-
-    img {
-      width: 100% !important;
-      height: 11vh;
-
-      object-fit: cover;
+  .section3 {
+    position: relative;
+    margin-bottom: 15px;
+    left: 160px;
+    width: 80%;
+    h3 {
+      font-weight: bold;
+    }
+    .collikecard {
+      border: 1px solid black;
     }
   }
 }
 
 @media (max-width: 768px) {
-  .hero {
-    margin: 25px;
-    // margin-right: 50px;
-    width: 90%;
-  }
-  .nomdusite {
-    color: black;
-    font-weight: bold;
-    font-size: 10px;
-  }
-  .firstimage {
-    font-weight: bold;
-    // width: 100% !important;
-    height: 52px;
-    color: white;
-    img {
-      width: 100% !important;
-      height: 8vh;
-
-      object-fit: cover;
+  .section2 {
+    position: relative;
+    left: 0px;
+    bottom: 80px !important;
+    ion-col {
+      .section2div {
+        display: flex;
+        height: 100% !important;
+        justify-content: space-between;
+        div {
+          flex-basis: 100%;
+          // text-align: center;
+          //  border: 1px solid black;
+          color: black;
+          img {
+            border-radius: 50%;
+            height: 100% !important;
+            object-fit: cover;
+            width: 50% !important;
+          }
+        }
+      }
     }
   }
 }
@@ -99,73 +105,63 @@ div {
   background-color: #f1f1f1;
 }
 
-.col {
-}
-
-.div1 {
+.section1 {
+  height: 80% !important;
   padding: 5px;
   padding-top: 15%;
   font-weight: bold;
   width: 100% !important;
-  background-image: url("../../../assets/boris/IMG-20210519-WA0033.jpg");
+  background-image: url("../../../assets/boris/cq5dam.web.1280.1280.jpeg");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 25vh;
-  width: 100%;
-  color: white;
-  text-align: center;
-  font-size: 11px;
-}
+  // background-position: center;
+  background-size: 100% 100%;
 
-.div2 {
-  padding: 5px;
-  padding-top: 15%;
-  font-weight: bold;
   width: 100% !important;
-  background-image: url("../../../assets/boris/IMG-20210519-WA0029.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 50vh;
-  width: 100%;
   color: white;
   text-align: center;
   font-size: 20px;
+  font-family: "Source Sans Pro", sans-serif !important;
+  ion-button {
+    height: 50px;
+    --background: var(--ion-color-primary-shade);
+  }
+  background-color: black;
 }
 
-.div3 {
-  padding: 5px;
-  padding-top: 15%;
-  font-weight: bold;
-  width: 100% !important;
-  background-image: url("../../../assets/boris/IMG-20210519-WA0030.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 25vh;
-  width: 100%;
-  color: white;
-  text-align: center;
-  font-size: 11px;
-}
+.section2 {
+  position: relative;
+  bottom: 12% !important;
 
-.div4 {
-  padding: 5px;
-  padding-top: 15%;
-  font-weight: bold;
-  width: 100% !important;
-  background-image: url("../../../assets/boris/IMG-20210519-WA0031.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 25vh;
-  width: 100%;
-  color: white;
-  text-align: center;
-  font-size: 11px;
+  background-color: whitesmoke;
+  .link {
+    position: relative;
+    right: 25px;
+    top: 10px;
+    // font-size: 10px;
+    a {
+      color: black;
+    }
+    h4 {
+      font-size: 12px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 13px;
+    }
+  }
 }
-
-.card {
-  font-size: 17px;
+.row2 {
+  background-color: #f1f1f1;
+}
+.section3 {
+  // position: relative;
+  //margin-bottom: 15px;
+  //left: 160px;
+  // width: 80%;
+  h3 {
+    font-weight: bold;
+  }
+  .collikecard {
+    border: 1px solid black;
+  }
 }
