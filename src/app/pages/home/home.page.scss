@@ -1,12 +1,11 @@
-.content {
-  --padding-bottom: 0px;
-  --padding-top: 0px;
-  margin: 0px;
-  background-color: yellow;
-  position: relative;
-  //bottom: 500px;
-}
 @media (min-width: 768px) {
+  .content {
+    --padding-bottom: 0px;
+    --padding-top: 0px;
+    --padding-end: 80px;
+    --padding-start: 80px;
+    margin: 0px auto;
+  }
   .section2 {
     left: 160px;
     height: 23% !important;
@@ -44,6 +43,13 @@
     }
     .collikecard {
       border: 1px solid black;
+    }
+  }
+  .section1 {
+    .textedumilieu {
+      // width: 20% !important;
+      // font-size: 80% !important;
+      font-weight: bold;
     }
   }
 }
@@ -126,6 +132,7 @@ div {
     --background: var(--ion-color-primary-shade);
   }
   background-color: black;
+  opacity: 0.9;
 }
 
 .section2 {
@@ -163,5 +170,42 @@ div {
   }
   .collikecard {
     border: 1px solid black;
+  }
+}
+
+//mozilla css trigger
+@-moz-document url-prefix() {
+  .textedumilieu {
+    font-size: 10px;
+  }
+  #textsection1 {
+    font-size: 30px;
+  }
+  .content {
+    // position: relative;
+    // bottom: 25% !important;
+  }
+  .content .section1 {
+    height: 80% !important;
+    // padding: 0px;
+    //padding-top: 5%;
+    font-weight: bold;
+    width: 100% !important;
+    background-image: url("../../../assets/boris/cq5dam.web.1280.1280.jpeg");
+    background-repeat: no-repeat;
+    // background-color: blue;
+    background-size: 100% 100%;
+
+    width: 100% !important;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Source Sans Pro", sans-serif !important;
+    ion-button {
+      height: 50px;
+      --background: var(--ion-color-primary-shade);
+    }
+    background-color: black;
+    opacity: 0.9;
   }
 }
