@@ -10,6 +10,22 @@
     left: 160px;
     height: 23% !important;
     width: 80%;
+    .link {
+      position: relative;
+      right: 25px;
+      top: 10px;
+      // font-size: 10px;
+      a {
+        color: black;
+      }
+      h4 {
+        font-size: 15px !important;
+        font-weight: bold;
+      }
+      p {
+        font-size: 13px;
+      }
+    }
     ion-col {
       .section2div {
         display: flex;
@@ -17,14 +33,15 @@
         justify-content: space-between;
         div {
           flex-basis: 100%;
+
           // text-align: center;
           //  border: 1px solid black;
           color: black;
           img {
             border-radius: 50%;
-            height: 100% !important;
+            height: 50% !important;
             object-fit: cover;
-            width: 80% !important;
+            width: 75% !important;
           }
         }
       }
@@ -71,9 +88,9 @@
           color: black;
           img {
             border-radius: 50%;
-            height: 100% !important;
+            height: 50% !important;
             object-fit: cover;
-            width: 50% !important;
+            width: 75% !important;
           }
         }
       }
