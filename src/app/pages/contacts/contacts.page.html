@@ -1,10 +1,109 @@
 <ion-content>
-  <ion-grid>
-    <ion-row class="ion-justify-content-center">
-      <ion-col size="12" size-md="10" size-lg="8" size-xl="6">
-        <h4>CONTACT</h4>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit....
+  <div class="hero">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="ion-text-uppercase overview">
+            <h3 class="main-h">contact us</h3>
+          </div>
+        </ion-col>
+        <ion-col><div class="ion-text-end ion-text-uppercase"></div></ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-grid class="center-contain">
+    <ion-row>
+      <ion-col size="12" size-sm="12" size-md="12" size-lg="6">
+        <div class="ion-text-uppercase ion-text-center">
+          <h3>GAHHC Map Here</h3>
+          <div>
+            <div class="google-map">
+              <img src="../../../assets/google-maps.jpg" />
+            </div>
+          </div>
+        </div>
+      </ion-col>
+
+      <ion-col size="12" size-sm="12" size-md="12" size-lg="6">
+        <ion-list lines="none">
+          <ion-item>
+            <ion-label>
+              <ion-text color="primary">
+                <h3>PHONE</h3>
+              </ion-text>
+              <p>Mobile: +91 9880396666</p>
+            </ion-label>
+
+            <ion-icon name="call-outline" slot="start"></ion-icon>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <ion-text color="primary">
+                <h3>ADDRESS</h3>
+              </ion-text>
+              <p>GAHHC cameroun B.P: 234012</p>
+            </ion-label>
+
+            <ion-icon name="location-outline" slot="start"></ion-icon>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <ion-text color="primary">
+                <h3>EMAIL</h3>
+              </ion-text>
+              <p>GAHHC@gmail.com</p>
+            </ion-label>
+
+            <ion-icon name="mail-outline" slot="start"></ion-icon>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-uppercase">
+          <h3 class="main-contact">contact us</h3>
+        </div>
+      </ion-col>
+      <ion-col><div class="ion-text-end ion-text-uppercase"></div></ion-col>
+    </ion-row>
+
+    <ion-row class="form">
+      <ion-col size="12" size-sm="12" size-md="6" size-lg="4">
+        <ion-item>
+          <ion-label position="floating">Your Name</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-sm="12" size-md="6" size-lg="4">
+        <ion-item>
+          <ion-label position="floating">Phone</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-sm="12" size-md="6" size-lg="4">
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-sm="12" size-md="12" size-lg="7">
+        <ion-item>
+          <ion-label position="floating">Message</ion-label>
+          <ion-textarea></ion-textarea>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-sm="12" size-md="12" size-lg="5">
+        <ion-button shape="round" expand="full" color="warning"
+          >send</ion-button
+        >
       </ion-col>
     </ion-row>
   </ion-grid>
+  <ion-footer>
+    <ion-toolbar color="dark">
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-footer>
 </ion-content>

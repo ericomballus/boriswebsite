@@ -71,20 +71,25 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 792px) {
   .section2 {
     position: relative;
     left: 0px;
     bottom: 80px !important;
+    width: 100% !important;
     ion-col {
       .section2div {
         display: flex;
-        height: 100% !important;
-        justify-content: space-between;
+        height: 50% !important;
+        justify-content: center;
         div {
           flex-basis: 100%;
           // text-align: center;
           //  border: 1px solid black;
+          h4 {
+            font-size: 11px !important;
+            font-weight: bold;
+          }
           color: black;
           img {
             border-radius: 50%;
