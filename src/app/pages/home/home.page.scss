@@ -1,4 +1,12 @@
 @media (min-width: 768px) {
+  .home-main-col {
+    margin-top: 10%;
+    color: white;
+    .home-main-div-section {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
   .content {
     --padding-bottom: 0px;
     --padding-top: 0px;
@@ -6,122 +14,9 @@
     --padding-start: 80px;
     margin: 0px auto;
   }
-  .section2 {
-    left: 160px;
-    height: 23% !important;
-    width: 80%;
-    .link {
-      position: relative;
-      right: 25px;
-      top: 10px;
-      // font-size: 10px;
-      a {
-        color: black;
-      }
-      h4 {
-        font-size: 15px !important;
-        font-weight: bold;
-      }
-      p {
-        font-size: 13px;
-      }
-    }
-    ion-col {
-      .section2div {
-        display: flex;
-        height: 100% !important;
-        justify-content: space-between;
-        div {
-          flex-basis: 100%;
-
-          // text-align: center;
-          //  border: 1px solid black;
-          color: black;
-          img {
-            border-radius: 50%;
-            height: 50% !important;
-            object-fit: cover;
-            width: 75% !important;
-          }
-        }
-      }
-    }
-  }
-  .section1text {
-    font-size: 50px;
-  }
-  .section3 {
-    position: relative;
-    margin-bottom: 15px;
-    left: 160px;
-    width: 80%;
-    h3 {
-      font-weight: bold;
-    }
-    .collikecard {
-      border: 1px solid black;
-    }
-  }
-  .section1 {
-    .textedumilieu {
-      // width: 20% !important;
-      // font-size: 80% !important;
-      font-weight: bold;
-    }
-  }
 }
 
 @media (max-width: 792px) {
-  .section2 {
-    position: relative;
-    left: 0px;
-    bottom: 80px !important;
-    width: 100% !important;
-    ion-col {
-      .section2div {
-        display: flex;
-        height: 50% !important;
-        justify-content: center;
-        div {
-          flex-basis: 100%;
-          // text-align: center;
-          //  border: 1px solid black;
-          h4 {
-            font-size: 11px !important;
-            font-weight: bold;
-          }
-          color: black;
-          img {
-            border-radius: 50%;
-            height: 50% !important;
-            object-fit: cover;
-            width: 75% !important;
-          }
-        }
-      }
-    }
-  }
-}
-.row {
-  .col {
-    ion-slides {
-      ion-slide {
-        height: 100%;
-
-        img {
-          width: 100% !important;
-          height: 51vh;
-
-          object-fit: cover;
-        }
-      }
-    }
-  }
-  .colRight {
-    width: 100% !important;
-    //  background-color: white;
-    max-height: 50vh;
-  }
 }
 
 div {
@@ -131,103 +26,4 @@ div {
 
 .firstrow {
   background-color: #f1f1f1;
-}
-
-.section1 {
-  height: 80% !important;
-  padding: 5px;
-  padding-top: 15%;
-  font-weight: bold;
-  width: 100% !important;
-  background-image: url("../../../assets/boris/cq5dam.web.1280.1280.jpeg");
-  background-repeat: no-repeat;
-  // background-position: center;
-  background-size: 100% 100%;
-
-  width: 100% !important;
-  color: white;
-  text-align: center;
-  font-size: 20px;
-  font-family: "Source Sans Pro", sans-serif !important;
-  ion-button {
-    height: 50px;
-    --background: var(--ion-color-primary-shade);
-  }
-  background-color: black;
-  opacity: 0.9;
-}
-
-.section2 {
-  position: relative;
-  bottom: 12% !important;
-
-  background-color: whitesmoke;
-  .link {
-    position: relative;
-    right: 25px;
-    top: 10px;
-    // font-size: 10px;
-    a {
-      color: black;
-    }
-    h4 {
-      font-size: 12px;
-      font-weight: bold;
-    }
-    p {
-      font-size: 13px;
-    }
-  }
-}
-.row2 {
-  background-color: #f1f1f1;
-}
-.section3 {
-  // position: relative;
-  //margin-bottom: 15px;
-  //left: 160px;
-  // width: 80%;
-  h3 {
-    font-weight: bold;
-  }
-  .collikecard {
-    border: 1px solid black;
-  }
-}
-
-//mozilla css trigger
-@-moz-document url-prefix() {
-  .textedumilieu {
-    font-size: 10px;
-  }
-  #textsection1 {
-    font-size: 30px;
-  }
-  .content {
-    // position: relative;
-    // bottom: 25% !important;
-  }
-  .content .section1 {
-    height: 80% !important;
-    // padding: 0px;
-    //padding-top: 5%;
-    font-weight: bold;
-    width: 100% !important;
-    background-image: url("../../../assets/boris/cq5dam.web.1280.1280.jpeg");
-    background-repeat: no-repeat;
-    // background-color: blue;
-    background-size: 100% 100%;
-
-    width: 100% !important;
-    color: white;
-    text-align: center;
-    font-size: 20px;
-    font-family: "Source Sans Pro", sans-serif !important;
-    ion-button {
-      height: 50px;
-      --background: var(--ion-color-primary-shade);
-    }
-    background-color: black;
-    opacity: 0.9;
-  }
 }

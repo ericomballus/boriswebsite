@@ -1,19 +1,6 @@
 @media (min-width: 768px) {
   ion-router-outlet {
-    margin-top: 203px;
-  }
-  @-moz-document url-prefix() {
-    .content {
-      height: 100%;
-      position: relative;
-      top: 2% !important;
-      ion-router-outlet {
-        margin-top: 133px !important;
-      }
-      app-header {
-        margin-bottom: 15% !important;
-      }
-    }
+    margin-top: 8%;
   }
 }
 
@@ -30,11 +17,23 @@
     color: var(--ion-color-primary);
   }
 }
-
-.couleur {
-  background: var(--ion-color-tertiary-tint);
-  color: red;
+div {
+  background: var(--ion-color-warning);
+  max-height: 65% !important;
 }
 app-header {
-  // background: var(--ion-color-tertiary-tint);
+  // margin-bottom: 0px;
+  z-index: 2000;
+}
+
+ion-router-outlet {
+  margin-top: 8%;
+  // margin-top: 0px !important;
+  // padding: 0px;
+}
+
+@-moz-document url-prefix() {
+  ion-router-outlet {
+    // margin-top: 9%;
+  }
 }

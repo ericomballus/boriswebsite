@@ -9,6 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class HeaderComponent implements OnInit {
   @Input() title: string;
   dropdown = false;
+  about_dropdown = false;
   FR = false;
   EN = true;
 
@@ -18,6 +19,7 @@ export class HeaderComponent implements OnInit {
   ];
   coverAll: Boolean = true;
   @ViewChild('productbtn', { read: ElementRef }) productbtn: ElementRef;
+  @ViewChild('aboutbtn', { read: ElementRef }) aboutbtn: ElementRef;
   language = 'EN';
   constructor(
     private translateConfigService: TranslateConfigService,
@@ -66,6 +68,25 @@ export class HeaderComponent implements OnInit {
       yTouch < topBoundary
     ) {
       this.dropdown = false;
+    }
+  }
+
+  hideAboutDropdown(event) {
+    const xTouch = event.clientX;
+    const yTouch = event.clientY;
+
+    const rect = this.aboutbtn.nativeElement.getBoundingClientRect();
+
+    const topBoundary = rect.top + 2;
+    const leftBoundary = rect.left + 2;
+    const rightBoundary = rect.right - 2;
+
+    if (
+      xTouch < leftBoundary ||
+      xTouch > rightBoundary ||
+      yTouch < topBoundary
+    ) {
+      this.about_dropdown = false;
     }
   }
 

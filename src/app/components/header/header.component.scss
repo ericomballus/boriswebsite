@@ -27,17 +27,7 @@
     --ion-grid-padding: 0 0;
     margin-bottom: 0px;
   }
-  .header1 {
-    ion-col {
-      max-height: 10% !important;
-      // background-color: yellowgreen;
-      img {
-        height: 100%;
-        object-fit: cover;
-        width: 15%;
-      }
-    }
-  }
+
   .header {
     width: 100% !important;
     margin: 0 0;
@@ -45,9 +35,9 @@
     background-color: #f1f1f1;
 
     border: 1px solid #3a3939;
-    position: relative;
-    top: 17px;
-    //bottom: 1px;
+    // position: relative;
+    // top: 17px;
+    bottom: 1px;
 
     ion-col {
       --ion-grid-padding: 0 0;
@@ -74,9 +64,7 @@
       // --padding-end: 0px;
     }
   }
-  .colflex {
-    display: flex;
-  }
+
   @-moz-document url-prefix() {
     .header1 {
       ion-col {
@@ -138,7 +126,8 @@
     display: block;
   }
 
-  .header {
+  .header,
+  .header1 {
     display: none;
   }
 }
@@ -158,6 +147,7 @@
   top: 40px;
   right: 4px;
   z-index: 1;
+
   ion-item:hover {
     --ion-item-color: var(--ion-color-primary);
   }
@@ -170,4 +160,77 @@
 .col1 {
   // border: 1px solid blue;
   display: flex;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  .header1 {
+    ion-col {
+      max-height: 10% !important;
+      // background-color: yellowgreen;
+      img {
+        height: 100%;
+        object-fit: cover;
+        width: 15%;
+      }
+    }
+  }
+  .header {
+    width: 100% !important;
+    margin: 0 0;
+    display: flex;
+    background-color: #f1f1f1;
+
+    border: 1px solid #3a3939;
+    // position: relative;
+    // top: 17px;
+    bottom: 1px;
+
+    ion-col {
+      --ion-grid-padding: 0 0;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      max-height: 60px !important;
+    }
+    ion-button {
+      color: var(--ion-color-dark);
+      border: 1px solid black;
+      height: 62px;
+      position: relative;
+      bottom: 7px;
+      margin: 0px;
+      font-size: 12px;
+      font-weight: bold;
+      min-width: 8%;
+    }
+    .btn {
+      height: 65px;
+
+      //--vertical-align: middle;
+      // --padding-start: 0px;
+      // --padding-end: 0px;
+    }
+  }
+  .btn-donate {
+  }
+}
+.mballus {
+  img {
+    width: 200px;
+    height: 600px;
+    object-fit: cover;
+  }
+}
+
+.btn-dropdown {
+  width: 136px;
+  height: 110px;
+  background: #fff;
+  position: absolute;
+  top: 52px;
+  left: 915px;
+  z-index: 1;
+
+  ion-item:hover {
+    --ion-item-color: var(--ion-color-primary);
+  }
 }

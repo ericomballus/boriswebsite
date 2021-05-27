@@ -55,7 +55,11 @@
               >
             </div>
           </ion-col>
-          <ion-col size="5" class="ion-text-uppercase ion-text-center">
+          <ion-col
+            class="btn-donate"
+            size="5"
+            class="ion-text-uppercase ion-text-center"
+          >
             <div class="ion-text-center">
               <ion-button
                 color="danger"
@@ -172,13 +176,46 @@
       -->
 
           <ion-button
+            #aboutbtn
+            (mouseenter)="about_dropdown = true"
+            (mouseleave)="hideAboutDropdown($event)"
             fill="clear"
             routerLink="/about"
             routerDirection="root"
             routerLinkActive="active-item"
           >
             {{ "MENU.About" | translate }}
+            <ion-icon
+              slot="end"
+              [name]="about_dropdown ? 'chevron-down' : 'chevron-up'"
+            ></ion-icon>
           </ion-button>
+
+          <div
+            *ngIf="about_dropdown"
+            class="btn-dropdown"
+            (mouseleave)="about_dropdown = false"
+          >
+            <ion-item
+              (click)="about_dropdown = false"
+              routerLink="/about"
+              [queryParams]="{ category: 'overview' }"
+              lines="none"
+              routerDirection="root"
+            >
+              OVERVIEW
+            </ion-item>
+            <ion-item
+              (click)="about_dropdown = false"
+              button
+              routerLink="/about"
+              [queryParams]="{ category: 'about' }"
+              lines="none"
+              routerDirection="root"
+            >
+              OUR TEAM
+            </ion-item>
+          </div>
 
           <ion-button
             fill="clear"
