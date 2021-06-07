@@ -20,12 +20,16 @@ export class HeaderComponent implements OnInit {
   coverAll: Boolean = true;
   @ViewChild('productbtn', { read: ElementRef }) productbtn: ElementRef;
   @ViewChild('aboutbtn', { read: ElementRef }) aboutbtn: ElementRef;
+  @ViewChild('sousmenu', { read: ElementRef }) sousmenu: ElementRef;
   language = 'EN';
   constructor(
     private translateConfigService: TranslateConfigService,
     public translate: TranslateService
   ) {
     this.languageChanged();
+    setTimeout(() => {
+      // this.getBtnPosition();
+    }, 1000);
   }
 
   ngOnInit() {}
@@ -36,6 +40,25 @@ export class HeaderComponent implements OnInit {
     /*if (lang) {
       this.translateConfigService.setLanguage(lang);
     } */
+  }
+  getBtnPosition() {
+    const posi = this.aboutbtn.nativeElement.getBoundingClientRect();
+    console.log(posi);
+    console.log(this.sousmenu);
+    console.log(posi.left);
+    console.log(parseInt(posi.left));
+
+    this.sousmenu.nativeElement.style.setProperty(
+      '--my-var',
+      `${parseInt(posi.left)}px`
+    );
+
+    this.sousmenu.nativeElement.style.setProperty(
+      '--my-top',
+      `${parseInt(posi.top)}px`
+    );
+
+    // this.sousmenu.nativeElement.style.
   }
   selectLanguage(value) {
     this.dropdown = false;
@@ -94,5 +117,9 @@ export class HeaderComponent implements OnInit {
     console.log('clic ok');
 
     this.coverAll = !this.coverAll;
+  }
+  closeSousMenu() {
+    console.log('hello');
+    this.about_dropdown = false;
   }
 }

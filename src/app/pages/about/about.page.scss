@@ -5,10 +5,10 @@ ion-col {
 h3 {
   color: white;
   font-weight: bold;
-  padding: 0px auto;
+  padding-left: 10px;
 
   text-align: left;
-  border-left: 1px solid rgb(255, 153, 0);
+  border-left: 1px solid var(--ion-color-primary);
   border-width: 15px;
 }
 

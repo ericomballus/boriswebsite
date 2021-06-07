@@ -260,10 +260,10 @@
 h3 {
   color: white;
   font-weight: bold;
-  padding: 0px auto;
+  padding-left: 10px;
 
   text-align: left;
-  border-left: 1px solid rgb(255, 153, 0);
+  border-left: 1px solid var(--ion-color-primary);
   border-width: 15px;
 }
 
@@ -271,4 +271,16 @@ h3 {
   position: relative;
   left: 25%;
   top: 70%;
+}
+
+.selector:not(*:root),
+.overview {
+  position: relative;
+  left: 25%;
+  top: 90%;
+}
+
+.selector:not(*:root),
+h3 {
+  padding-top: 16px;
 }

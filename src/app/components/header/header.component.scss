@@ -8,18 +8,7 @@
   }
   #navmenu ion-col .mybtn {
     // background-color: yellowgreen;
-    height: 40px;
-    padding: 0px !important;
-    ion-button {
-      //display: none;
-      color: var(--ion-color-dark);
-      border: 1px solid rgb(27, 26, 26);
-      height: 52px;
-      font-size: 10px;
-      font-weight: bold;
-      min-width: 8%;
-      // background-color: yellow;
-    }
+    // height: 52px;
   }
 
   ion-grid {
@@ -31,7 +20,7 @@
   .header {
     width: 100% !important;
     margin: 0 0;
-    display: flex;
+    //  display: flex;
     background-color: #f1f1f1;
 
     border: 1px solid #3a3939;
@@ -39,25 +28,11 @@
     // top: 17px;
     bottom: 1px;
 
-    ion-col {
-      --ion-grid-padding: 0 0;
-      margin-bottom: 0px;
-      margin-top: 0px;
-      max-height: 60px !important;
+    ion-col .mybtn {
     }
-    ion-button {
-      color: var(--ion-color-dark);
-      border: 1px solid black;
-      height: 62px;
-      position: relative;
-      bottom: 7px;
-      margin: 0px;
-      font-size: 12px;
-      font-weight: bold;
-      min-width: 8%;
-    }
+
     .btn {
-      height: 65px;
+      // height: 65px;
 
       //--vertical-align: middle;
       // --padding-start: 0px;
@@ -66,6 +41,18 @@
   }
 
   @-moz-document url-prefix() {
+    .row-traduction {
+      position: relative;
+      bottom: 65px;
+      left: 55%;
+    }
+    ion-grid .last-row {
+      position: relative;
+      // bottom: 23px;
+      top: -20px;
+      padding: 0px;
+      margin: 0px;
+    }
     .header1 {
       ion-col {
         max-height: 10% !important;
@@ -86,7 +73,7 @@
         }
       }
     }
-    .header {
+    .newheader {
       width: 100% !important;
       margin: 0 0;
       display: flex;
@@ -94,30 +81,66 @@
 
       border: 1px solid #3a3939;
       position: relative;
-      top: 17px;
+      top: -20px;
       //bottom: 1px;
       img {
         //object-fit: fill;
       }
+      .mybtn {
+        --ion-grid-padding: 0 0;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        // max-height: 60px !important;
+        ion-button {
+          color: var(--ion-color-dark);
+          border: 1px solid black;
+          height: 40px !important;
+          position: relative;
+          bottom: 7px;
+          margin: 0px;
+          font-size: 10px;
+          font-weight: bold;
+          min-width: 8%;
+        }
+      }
     }
+
     #navmenu {
       height: 40px !important;
     }
-    #navmenu ion-col .mybtn {
-      // background-color: yellowgreen;
-      height: 40px;
-      padding: 0px !important;
-      ion-button {
-        //display: none;
-        color: var(--ion-color-dark);
-        border: 1px solid rgb(27, 26, 26);
-        height: 40px !important;
-        font-size: 10px;
-        font-weight: bold;
-        min-width: 8%;
-        // background-color: yellow;
+    .last-row {
+      position: relative;
+      top: -65px;
+    }
+    .btn-dropdown {
+      //  position: relative;
+      // top: 100px;
+      // left: var(--my-var);
+      z-index: 1;
+      div {
+        width: 100%;
+        // height: 110px;
+        background: #fff;
+        position: relative;
+        top: -50px;
+        left: 2%;
+        p {
+          font-size: 11px;
+          padding-bottom: 10px;
+          padding-top: 10px;
+
+          margin: auto;
+        }
+
+        p:hover {
+          color: var(--ion-color-primary);
+        }
       }
     }
+  }
+
+  .btn-dropdown {
+    top: 40px !important;
   }
 }
 
@@ -126,7 +149,9 @@
     display: block;
   }
 
-  .header,
+  .header {
+    display: none;
+  }
   .header1 {
     display: none;
   }
@@ -139,19 +164,6 @@
   color: var(--ion-color-light) !important;
 }
 
-.dropdown {
-  width: 136px;
-  height: 150px;
-  background: #fff;
-  position: absolute;
-  top: 40px;
-  right: 4px;
-  z-index: 1;
-
-  ion-item:hover {
-    --ion-item-color: var(--ion-color-primary);
-  }
-}
 .btn {
   height: 50px;
   // padding: 8px 24px;
@@ -162,57 +174,6 @@
   display: flex;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
-  .header1 {
-    ion-col {
-      max-height: 10% !important;
-      // background-color: yellowgreen;
-      img {
-        height: 100%;
-        object-fit: cover;
-        width: 15%;
-      }
-    }
-  }
-  .header {
-    width: 100% !important;
-    margin: 0 0;
-    display: flex;
-    background-color: #f1f1f1;
-
-    border: 1px solid #3a3939;
-    // position: relative;
-    // top: 17px;
-    bottom: 1px;
-
-    ion-col {
-      --ion-grid-padding: 0 0;
-      margin-bottom: 0px;
-      margin-top: 0px;
-      max-height: 60px !important;
-    }
-    ion-button {
-      color: var(--ion-color-dark);
-      border: 1px solid black;
-      height: 62px;
-      position: relative;
-      bottom: 7px;
-      margin: 0px;
-      font-size: 12px;
-      font-weight: bold;
-      min-width: 8%;
-    }
-    .btn {
-      height: 65px;
-
-      //--vertical-align: middle;
-      // --padding-start: 0px;
-      // --padding-end: 0px;
-    }
-  }
-  .btn-donate {
-  }
-}
 .mballus {
   img {
     width: 200px;
@@ -221,16 +182,114 @@
   }
 }
 
-.btn-dropdown {
-  width: 136px;
-  height: 110px;
-  background: #fff;
-  position: absolute;
-  top: 52px;
-  left: 915px;
-  z-index: 1;
+.selector:not(*:root),
+.newheader {
+  display: none;
+  width: 100% !important;
+  margin: 0 0;
+  display: flex;
+  background-color: #f1f1f1;
 
-  ion-item:hover {
-    --ion-item-color: var(--ion-color-primary);
+  border: 1px solid #3a3939;
+  position: relative;
+
+  top: -35px;
+  // bottom: 1px;
+
+  ion-col .mybtn {
+    --ion-grid-padding: 0 0;
+    margin-bottom: 0px;
+    margin-top: 0px;
   }
+  ion-button {
+    color: var(--ion-color-dark);
+    border: 1px solid black;
+    height: 50px;
+    position: relative;
+    bottom: 7px;
+    margin: 0px;
+    font-size: 12px;
+    font-weight: bold;
+    min-width: 8%;
+  }
+  .btn {
+    height: 65px;
+
+    //--vertical-align: middle;
+    // --padding-start: 0px;
+    // --padding-end: 0px;
+  }
+}
+
+.selector:not(*:root),
+.last-row {
+  position: relative;
+  top: -55px;
+  // left: 35%;
+  // background-color: rgb(255, 0, 191);
+  // width: 15%;
+  padding: 0px;
+  margin: 0px;
+}
+.selector:not(*:root),
+.btn-dropdown {
+  // z-index: 1;
+  // background-color: chartreuse;
+  width: 100%;
+  height: 100%;
+  div {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: relative;
+    top: -30px;
+    left: 3%;
+    p {
+      font-size: 13px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+
+      margin: auto;
+    }
+
+    p:hover {
+      color: var(--ion-color-primary);
+    }
+  }
+}
+
+.selector:not(*:root),
+.row-traduction {
+  position: relative;
+  bottom: 65px;
+  left: 55%;
+}
+
+.selector:not(*:root),
+.header1 {
+  ion-col {
+    max-height: 10% !important;
+    // background-color: yellowgreen;
+    img {
+      height: 100%;
+      object-fit: cover;
+      width: 15%;
+    }
+  }
+}
+
+.selector:not(*:root),
+.mybtn {
+  ion-button {
+    bottom: 5px;
+    margin: 0px;
+    font-size: 12px;
+  }
+}
+
+.dropdown {
+  // display: none;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
 }

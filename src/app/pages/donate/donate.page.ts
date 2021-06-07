@@ -7,6 +7,7 @@ import { ICreateOrderRequest, IPayPalConfig } from 'ngx-paypal';
 })
 export class DonatePage implements OnInit {
   public payPalConfig?: IPayPalConfig;
+  title = 'simple-bootstarp-validation-angular';
   constructor() {}
 
   ngOnInit() {
@@ -86,5 +87,16 @@ export class DonatePage implements OnInit {
         console.log('onClick', data, actions);
       },
     };
+  }
+
+  validate() {
+    var form = document.getElementsByClassName(
+      'needs-validation'
+    )[0] as HTMLFormElement;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    form.classList.add('was-validated');
   }
 }

@@ -5,9 +5,10 @@ import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule } from '@angular/forms';
+import { Header2Component } from './header2/header2.component';
 
 @NgModule({
-  declarations: [HeaderComponent],
+  declarations: [HeaderComponent, Header2Component],
   imports: [
     CommonModule,
     IonicModule,
@@ -15,6 +16,6 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     TranslateModule,
   ],
-  exports: [HeaderComponent, TranslateModule, FormsModule],
+  exports: [HeaderComponent, Header2Component, TranslateModule, FormsModule],
 })
 export class SharedComponentsModule {}

@@ -1,261 +1,74 @@
-<div class="myheader">
-  <ion-header class="mobile-header">
-    <ion-toolbar color="primary">
-      <ion-buttons slot="start">
-        <ion-menu-button menu="myMenu"></ion-menu-button>
-      </ion-buttons>
-      <ion-title>{{ title }}</ion-title>
-      <ion-buttons slot="end"> </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
+<ion-header class="mobile-header">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="myMenu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ title }}</ion-title>
+    <ion-buttons slot="end"> </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
-  <ion-grid>
-    <ion-row class="header1">
-      <ion-col
-        offset="1"
-        size="2"
-        class="ion-align-self-center ion-padding colflex"
-      >
-        <div class="col1">
-          <div>
-            <ion-button
-              class="underlinetexte"
-              href=""
-              fill="clear"
-              color="primary"
-            >
-              <a href="">TEL:+23722024356</a>
-              <ion-icon slot="start" name="call-outline"></ion-icon>
-            </ion-button>
-          </div>
-          <div>
-            <ion-button
-              fill="clear"
-              color="primary"
-              routerLink="/contacts"
-              routerDirection="root"
-            >
-              <a href=""> {{ "MENU.Contact" | translate }} us</a>
-              <ion-icon slot="start" name="chatbubbles-outline"></ion-icon>
-            </ion-button>
-          </div>
-        </div>
-      </ion-col>
-      <ion-col size="5">
-        <div class="ion-text-center mballus">
-          <img src="../../../assets/logo.jpg" />
-        </div>
-      </ion-col>
-      <ion-col size="4" class="ion-align-self-center">
-        <ion-row>
-          <ion-col size="5">
-            <div class="ion-text-uppercase ion-text-center">
-              <ion-button fill="outline" color="danger">
-                GIVE IN HONOR & MEMORIAL</ion-button
-              >
-            </div>
-          </ion-col>
-          <ion-col
-            class="btn-donate"
-            size="5"
-            class="ion-text-uppercase ion-text-center"
+<ion-grid>
+  <ion-row class="header1">
+    <ion-col
+      offset="1"
+      size="2"
+      class="ion-align-self-center ion-padding colflex"
+    >
+      <div class="col1">
+        <div>
+          <ion-button
+            class="underlinetexte"
+            href=""
+            fill="clear"
+            color="primary"
           >
-            <div class="ion-text-center">
-              <ion-button
-                color="danger"
-                routerLink="/donate"
-                routerDirection="root"
-              >
-                <ion-icon slot="start" name="heart-outline"></ion-icon>
-                {{ "MENU.Donate" | translate }}</ion-button
-              >
-            </div>
-          </ion-col>
-          <ion-col size="2">
-            <div>
-              <ion-button
-                #productbtn
-                (mouseenter)="dropdown = true"
-                (mouseleave)="hideDropdown($event)"
-                fill="clear"
-                routerDirection="root"
-                routerLinkActive="active-item"
-              >
-                {{ language }}
-                <ion-icon
-                  slot="end"
-                  [name]="dropdown ? 'chevron-down' : 'chevron-up'"
-                ></ion-icon>
-              </ion-button>
-              <div
-                *ngIf="dropdown"
-                class="dropdown"
-                (mouseleave)="dropdown = false"
-                #dropdownbox
-              >
-                <ion-item (click)="selectLanguage('fr')" lines="none">
-                  FR
-                  <ion-checkbox slot="end" [(ngModel)]="FR"></ion-checkbox>
-                </ion-item>
-                <ion-item (click)="selectLanguage('en')" lines="none">
-                  EN
-                  <ion-checkbox slot="end" [(ngModel)]="EN"></ion-checkbox>
-                </ion-item>
-              </div>
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-col>
-    </ion-row>
-    <ion-row id="navmenu" class="header ion-align-items-center">
-      <ion-col size="12" class="ion-text-center">
-        <div class="mybtn">
+            <a href="">TEL:+23722024356</a>
+            <ion-icon slot="start" name="call-outline"></ion-icon>
+          </ion-button>
+        </div>
+        <div>
           <ion-button
             fill="clear"
-            routerLink="/"
+            color="primary"
+            routerLink="/contacts"
             routerDirection="root"
-            routerLinkActive="active-item"
-            [routerLinkActiveOptions]="{ exact: true }"
           >
-            {{ "MENU.Home" | translate }}
+            <a href=""> {{ "MENU.Contact" | translate }} us</a>
+            <ion-icon slot="start" name="chatbubbles-outline"></ion-icon>
           </ion-button>
-          <!-- Button with dropdown 
-       <ion-button
-        #productbtn
-        (mouseenter)="dropdown = true"
-        (mouseleave)="hideDropdown($event)"
-        fill="clear"
-       
-        routerLink="/products"
-        routerDirection="root"
-        routerLinkActive="active-item"
-      >
-        Products
-        <ion-icon
-          slot="end"
-          [name]="dropdown ? 'chevron-down' : 'chevron-up'"
-        ></ion-icon>
-      </ion-button>
-      <div
-        *ngIf="dropdown"
-        class="dropdown"
-        (mouseleave)="dropdown = false"
-        #dropdownbox
-      >
-        <ion-item
-          (click)="dropdown = false"
-          routerLink="/products"
-          [queryParams]="{ category: 'popular' }"
-          lines="none"
-          routerDirection="root"
-        >
-          Popular
-        </ion-item>
-        <ion-item
-          (click)="dropdown = false"
-          button
-          routerLink="/products"
-          [queryParams]="{ category: 'cloth' }"
-          lines="none"
-          routerDirection="root"
-        >
-          Cloth
-        </ion-item>
-        <ion-item
-          (click)="dropdown = false"
-          button
-          routerLink="/products"
-          [queryParams]="{ category: 'gadgets' }"
-          lines="none"
-          routerDirection="root"
-        >
-          Gadgets
-        </ion-item>
+        </div>
       </div>
-      
-      -->
-
-          <ion-button
-            #aboutbtn
-            (mouseenter)="about_dropdown = true"
-            (mouseleave)="hideAboutDropdown($event)"
-            fill="clear"
-            routerLink="/about"
-            routerDirection="root"
-            routerLinkActive="active-item"
-          >
-            {{ "MENU.About" | translate }}
-            <ion-icon
-              slot="end"
-              [name]="about_dropdown ? 'chevron-down' : 'chevron-up'"
-            ></ion-icon>
-          </ion-button>
-
-          <div
-            *ngIf="about_dropdown"
-            class="btn-dropdown"
-            (mouseleave)="about_dropdown = false"
-          >
-            <ion-item
-              (click)="about_dropdown = false"
-              routerLink="/about"
-              [queryParams]="{ category: 'overview' }"
-              lines="none"
-              routerDirection="root"
-            >
-              OVERVIEW
-            </ion-item>
-            <ion-item
-              (click)="about_dropdown = false"
-              button
-              routerLink="/about"
-              [queryParams]="{ category: 'about' }"
-              lines="none"
-              routerDirection="root"
-            >
-              OUR TEAM
-            </ion-item>
-          </div>
-
-          <ion-button
-            fill="clear"
-            routerLink="/activity"
-            routerDirection="root"
-            routerLinkActive="active-item"
-          >
-            {{ "MENU.Activity" | translate }}
-          </ion-button>
-          <ion-button
-            fill="clear"
-            routerLink="/impact"
-            routerDirection="root"
-            routerLinkActive="active-item"
-          >
-            {{ "MENU.Impact" | translate }}
-          </ion-button>
-
-          <!--
-        <ion-button
-        fill="clear"
-        routerLink="/contacts"
-        routerDirection="root"
-        routerLinkActive="active-item"
-      >
-        {{ "MENU.Contact" | translate }}
-      </ion-button>
-        <ion-button
-        fill="clear"
-        routerLink="/donate"
-        routerDirection="root"
-        routerLinkActive="active-item"
-      >
-        {{ "MENU.Donate" | translate }}
-      </ion-button>
-     -->
-        </div>
-      </ion-col>
-      <!--
-        <ion-col size="1" class="ion-text-right">
+    </ion-col>
+    <ion-col size="5">
+      <div class="ion-text-center mballus">
+        <img src="../../../assets/logo.jpg" />
+      </div>
+    </ion-col>
+    <ion-col size="4" class="ion-align-self-center"> </ion-col>
+  </ion-row>
+  <ion-row class="row-traduction">
+    <ion-col size="2">
+      <div class="ion-text-uppercase ion-text-center">
+        <ion-button fill="outline" color="danger">
+          GIVE IN HONOR & MEMORIAL</ion-button
+        >
+      </div>
+    </ion-col>
+    <ion-col
+      class="btn-donate"
+      size="2"
+      class="ion-text-uppercase ion-text-center"
+    >
+      <div class="ion-text-center">
+        <ion-button color="danger" routerLink="/donate" routerDirection="root">
+          <ion-icon slot="start" name="heart-outline"></ion-icon>
+          {{ "MENU.Donate" | translate }}</ion-button
+        >
+      </div>
+    </ion-col>
+    <ion-col size="1">
+      <div>
         <ion-button
           #productbtn
           (mouseenter)="dropdown = true"
@@ -285,8 +98,91 @@
             <ion-checkbox slot="end" [(ngModel)]="EN"></ion-checkbox>
           </ion-item>
         </div>
-      </ion-col>
-      -->
-    </ion-row>
-  </ion-grid>
-</div>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <ion-row id="navmenu" class="newheader ion-align-items-center">
+    <ion-col size="12" class="ion-text-center mybtn">
+      <ion-button
+        (mouseenter)="closeSousMenu()"
+        fill="clear"
+        routerLink="/"
+        routerDirection="root"
+        routerLinkActive="active-item"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (mouseenter)="about_dropdown = false"
+      >
+        {{ "MENU.Home" | translate }}
+      </ion-button>
+
+      <ion-button
+        #aboutbtn
+        (mouseenter)="about_dropdown = true"
+        (mouseleave)="hideAboutDropdown($event)"
+        fill="clear"
+        routerLink="/about"
+        routerDirection="root"
+        routerLinkActive="active-item"
+      >
+        {{ "MENU.About" | translate }}
+        <ion-icon
+          slot="end"
+          [name]="about_dropdown ? 'chevron-down' : 'chevron-up'"
+        ></ion-icon>
+      </ion-button>
+
+      <ion-button
+        (mouseenter)="closeSousMenu()"
+        fill="clear"
+        routerLink="/activity"
+        routerDirection="root"
+        routerLinkActive="active-item"
+      >
+        {{ "MENU.Activity" | translate }}
+      </ion-button>
+      <ion-button
+        (mouseenter)="closeSousMenu()"
+        fill="clear"
+        routerLink="/impact"
+        routerDirection="root"
+        routerLinkActive="active-item"
+      >
+        {{ "MENU.Impact" | translate }}
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="last-row">
+    <ion-col
+      offset="5"
+      size="1"
+      class="btn-dropdown"
+      *ngIf="about_dropdown"
+      (mouseleave)="closeSousMenu()"
+    >
+      <div #sousmenu class="ion-text-center" (mouseleave)="closeSousMenu()">
+        <p
+          text-center
+          (click)="about_dropdown = false"
+          routerLink="/about"
+          [queryParams]="{ category: 'overview' }"
+          lines="none"
+          routerDirection="root"
+        >
+          OVERVIEW
+        </p>
+        <p
+          (click)="about_dropdown = false"
+          button
+          routerLink="/about"
+          [queryParams]="{ category: 'about' }"
+          lines="none"
+          routerDirection="root"
+        >
+          OUR TEAM
+        </p>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
