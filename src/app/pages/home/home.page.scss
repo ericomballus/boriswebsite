@@ -27,3 +27,273 @@ div {
 .firstrow {
   background-color: #f1f1f1;
 }
+.home-main-lastrow {
+  //  background-color: blue;
+  margin-top: 200px;
+}
+@-moz-document url-prefix() {
+  .hero {
+    //background-image: url("../src/assets/boris/IMG-20210519-WA0030.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 18vh;
+    width: 100%;
+  }
+
+  .home-main {
+    background-image: url("../../../assets/boris/cq5dam.web.1280.1280.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    height: 75vh;
+    width: 100%;
+    ion-col {
+    }
+    .home-main-col1 {
+      height: 50%;
+      margin-top: 10%;
+      color: rgb(235, 33, 33);
+      position: relative;
+      top: 20%;
+    }
+    .home-main-div-section {
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+    .textedumilieu {
+    }
+  }
+
+  .hero {
+    margin-top: 4%;
+  }
+  .div-inner {
+    position: relative;
+    bottom: 70px;
+    // left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .div-inner .home-main-col2 {
+    background-color: #f1f1f1;
+    display: flex;
+
+    margin: 0 auto;
+    width: 80%;
+
+    .container1 {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 0;
+      text-align: center;
+      display: flex;
+      width: 100%;
+      align-items: center;
+    }
+    .container1 div {
+      flex-grow: 1;
+    }
+    .container1 .image {
+      height: 150px;
+      width: 200px;
+      position: relative;
+      top: 15%;
+      display: flex;
+      overflow: hidden;
+      p {
+        margin-right: 5px;
+        a {
+          font-size: 14px;
+          color: black;
+          font-weight: bold;
+          text-transform: lowercase;
+        }
+        small {
+          font-size: 14px;
+          text-transform: lowercase;
+        }
+      }
+    }
+    .container_img {
+      // float: left;
+      width: 110px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+  .main-h {
+    color: white;
+    font-weight: bold;
+    padding: 0px auto;
+
+    text-align: left;
+    border-left: 1px solid rgb(255, 153, 0);
+    border-width: 15px;
+  }
+  .overview {
+    position: relative;
+    left: 25%;
+    top: 70%;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  .hero {
+    background-image: url("../../../assets/boris/cq5dam.web.1280.1280.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 18vh;
+    width: 100%;
+  }
+}
+
+h3 {
+  color: white;
+  font-weight: bold;
+  padding-left: 10px;
+
+  text-align: left;
+  border-left: 1px solid var(--ion-color-primary);
+  border-width: 15px;
+}
+
+.overview {
+  position: relative;
+  left: 25%;
+  top: 70%;
+}
+.selector:not(*:root),
+.home-main {
+  background-image: url("../../../assets/boris/cq5dam.web.1280.1280.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  height: 70vh;
+  width: 100%;
+  ion-col {
+  }
+  .home-main-col1 {
+    height: 50%;
+    margin-top: 10%;
+    color: rgb(235, 33, 33);
+    position: relative;
+    top: 15%;
+  }
+  .home-main-div-section {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .textedumilieu {
+  }
+}
+.selector:not(*:root),
+.div-inner {
+  // display: table;
+  position: relative;
+  bottom: 250px;
+  // left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.selector:not(*:root),
+.overview {
+  position: relative;
+  left: 25%;
+  top: 90%;
+}
+
+.selector:not(*:root),
+h3 {
+  padding-top: 16px;
+}
+.selector:not(*:root),
+.home-main {
+  .home-main-col1 {
+    // height: 50% !important;
+    // margin-top: 10%;
+    // color: white;
+    position: relative;
+    top: 150px;
+    .home-main-div-section {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: rgb(245, 48, 48);
+    }
+    .textedumilieu {
+      font-size: 20px;
+    }
+  }
+}
+.selector:not(*:root),
+.home-main {
+  .home-main-col2 {
+    width: 80%;
+  }
+}
+.selector:not(*:root),
+.home-main-col2 {
+  //margin-top: 10%;
+
+  position: relative;
+  top: 160px;
+
+  background-color: #f1f1f1;
+  display: flex;
+
+  // height: 10%;
+  margin: 0 auto;
+  width: 80%;
+
+  .container1 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    text-align: center;
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  .container1 div {
+    flex-grow: 1;
+  }
+  .container1 .image {
+    height: 150px;
+    width: 200px;
+    position: relative;
+    top: 15%;
+    display: flex;
+    overflow: hidden;
+    p {
+      margin-right: 5px;
+      a {
+        font-size: 15px;
+        color: black;
+        font-weight: bold;
+        text-transform: lowercase;
+      }
+      small {
+        font-size: 15px;
+        text-transform: lowercase;
+      }
+    }
+  }
+  .container_img {
+    // float: left;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .link {
+    // margin-right: 100px;
+    // display: block;
+    // padding: 15px;
+    //  width: 100%;
+
+    // width: 100%;
+  }
+}
