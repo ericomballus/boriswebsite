@@ -49,6 +49,11 @@ const routes: Routes = [
             (m) => m.ContactsPageModule
           ),
       },
+      {
+        path: 'ourteam',
+        loadChildren: () =>
+          import('../ourteam/ourteam.module').then((m) => m.OurteamPageModule),
+      },
     ],
   },
 ];

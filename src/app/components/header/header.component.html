@@ -23,7 +23,7 @@
             fill="clear"
             color="primary"
           >
-            <a href="">TEL:+23722024356</a>
+            <a href="">TEL:+237 699 641 013</a>
             <ion-icon slot="start" name="call-outline"></ion-icon>
           </ion-button>
         </div>
@@ -121,8 +121,6 @@
         (mouseenter)="about_dropdown = true"
         (mouseleave)="hideAboutDropdown($event)"
         fill="clear"
-        routerLink="/about"
-        routerDirection="root"
         routerLinkActive="active-item"
       >
         {{ "MENU.About" | translate }}
@@ -173,10 +171,10 @@
           OVERVIEW
         </p>
         <p
+          text-center
           (click)="about_dropdown = false"
-          button
-          routerLink="/about"
-          [queryParams]="{ category: 'about' }"
+          routerLink="/ourteam"
+          [queryParams]="{ category: 'our-team' }"
           lines="none"
           routerDirection="root"
         >

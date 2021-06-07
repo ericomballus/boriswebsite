@@ -1,0 +1,28 @@
+ion-col {
+  ion-div {
+  }
+}
+h3 {
+  color: white;
+  font-weight: bold;
+  padding-left: 10px;
+
+  text-align: left;
+  border-left: 1px solid var(--ion-color-primary);
+  border-width: 15px;
+}
+
+.overview {
+  position: relative;
+  left: 25%;
+  top: 70%;
+}
+.main-div {
+  margin-bottom: 15px;
+  margin-top: 10px;
+  font-size: 18px;
+  padding: 16px;
+}
+ol.c {
+  list-style-type: upper-roman;
+}

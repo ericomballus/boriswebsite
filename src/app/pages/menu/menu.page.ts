@@ -25,6 +25,12 @@ export class MenuPage implements OnInit {
     },
 
     {
+      title: 'Our Team',
+      icon: 'list',
+      path: '/ourteam',
+    },
+
+    {
       title: 'Activities',
       icon: 'list',
       path: '/activity',

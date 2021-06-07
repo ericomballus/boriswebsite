@@ -7,7 +7,15 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/menu/menu.module').then((m) => m.MenuPageModule),
   },
-  /* {
+
+  /* 
+ {
+    path: 'ourteam',
+    loadChildren: () =>
+      import('./pages/ourteam/ourteam.module').then((m) => m.OurteamPageModule),
+  },
+  
+  {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },

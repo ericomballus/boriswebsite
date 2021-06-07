@@ -12,10 +12,10 @@
     </ion-grid>
   </div>
   <ion-grid class="center-contain">
-    <ion-row>
+    <ion-row class="ion-align-items-center">
       <ion-col size="12" size-sm="12" size-md="12" size-lg="6">
         <div class="ion-text-uppercase ion-text-center">
-          <h3>GAHHC Map Here</h3>
+          <h5>GAHHC Map Here</h5>
           <div>
             <div class="google-map">
               <img src="../../../assets/google-maps.jpg" />
@@ -31,7 +31,7 @@
               <ion-text color="primary">
                 <h3>PHONE</h3>
               </ion-text>
-              <p>Mobile: +91 9880396666</p>
+              <p>TEL: 237 699 641 013</p>
             </ion-label>
 
             <ion-icon name="call-outline" slot="start"></ion-icon>
@@ -41,7 +41,7 @@
               <ion-text color="primary">
                 <h3>ADDRESS</h3>
               </ion-text>
-              <p>GAHHC cameroun B.P: 234012</p>
+              <p>GAHHC Cameroun B.P: 234-Yaoundé</p>
             </ion-label>
 
             <ion-icon name="location-outline" slot="start"></ion-icon>
@@ -51,7 +51,7 @@
               <ion-text color="primary">
                 <h3>EMAIL</h3>
               </ion-text>
-              <p>GAHHC@gmail.com</p>
+              <p>gahhc@gmail.com</p>
             </ion-label>
 
             <ion-icon name="mail-outline" slot="start"></ion-icon>
@@ -59,52 +59,71 @@
         </ion-list>
       </ion-col>
     </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <div class="ion-text-uppercase">
-          <h3 class="main-contact">contact us</h3>
-        </div>
-      </ion-col>
-      <ion-col><div class="ion-text-end ion-text-uppercase"></div></ion-col>
-    </ion-row>
-
-    <ion-row class="form">
-      <ion-col size="12" size-sm="12" size-md="12" size-lg="12">
-        <ion-item>
-          <ion-label>Your Name</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col size="12" size-sm="12" size-md="12" size-lg="12">
-        <ion-item>
-          <ion-label>Phone</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col size="12" size-sm="12" size-md="12" size-lg="12">
-        <ion-item>
-          <ion-label>Email</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col size="12" size-sm="12" size-md="12" size-lg="5">
-        <ion-item>
-          <ion-label>Message</ion-label>
-          <ion-textarea></ion-textarea>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col offset-lg="2" size="12" size-sm="12" size-md="12" size-lg="4">
-        <div class="ion-text-center">
-          <ion-button shape="round" expand="full" color="warning"
-            >send</ion-button
-          >
-        </div>
-      </ion-col>
-    </ion-row>
   </ion-grid>
+  <div class="outer">
+    <div class="middle">
+      <div class="inner">
+        <div class="jumbotron">
+          <form class="needs-validation">
+            <div class="form-group mb-3">
+              <label for="uname">Your name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="uname"
+                placeholder="Enter username"
+                name="uname"
+                required
+              />
+              <div class="valid-feedback">Valid name.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group mb-3">
+              <label for="unphone">Phone number:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="unphone"
+                placeholder="Enter phone number"
+                name="unphone"
+                required
+              />
+              <div class="valid-feedback">Valid phone nuber.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group mb-3">
+              <label for="mail">Password:</label>
+              <input
+                type="email"
+                class="form-control"
+                id="mail"
+                placeholder="Enter your mail"
+                name="mail"
+                required
+              />
+              <div class="valid-feedback">Valid Email.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group mb-3">
+              <label for="mail">Message:</label>
+
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="5"
+              ></textarea>
+              <div class="valid-feedback">Valid message.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+
+            <button type="button" (click)="validate()" class="btn btn-primary">
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   <ion-footer>
     <ion-toolbar color="dark">
       <ion-title></ion-title>

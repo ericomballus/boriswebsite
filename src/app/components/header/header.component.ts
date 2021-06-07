@@ -1,6 +1,7 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { TranslateConfigService } from '../../translate-config.service';
 import { TranslateService } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -24,7 +25,8 @@ export class HeaderComponent implements OnInit {
   language = 'EN';
   constructor(
     private translateConfigService: TranslateConfigService,
-    public translate: TranslateService
+    public translate: TranslateService,
+    private router: Router
   ) {
     this.languageChanged();
     setTimeout(() => {
