@@ -13,3 +13,33 @@ img {
 ion-content {
   --background: #f1f1f1;
 }
+
+small {
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  small {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .intro {
+    p {
+      font-size: 20px;
+    }
+  }
+}
+
+.row {
+  margin-top: 2%;
+
+  .titre {
+    text-align: center;
+    text-transform: uppercase;
+
+    font-weight: bold;
+    h4 {
+      text-decoration: underline;
+    }
+  }
+}

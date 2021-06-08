@@ -6,7 +6,11 @@ const routes: Routes = [
     path: '',
     loadChildren: () =>
       import('./pages/menu/menu.module').then((m) => m.MenuPageModule),
+  },  {
+    path: 'footer',
+    loadChildren: () => import('./pages/footer/footer.module').then( m => m.FooterPageModule)
   },
+
 
   /* 
  {

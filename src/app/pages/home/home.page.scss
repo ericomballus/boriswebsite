@@ -8,10 +8,10 @@
     }
   }
   .content {
-    --padding-bottom: 0px;
-    --padding-top: 0px;
-    --padding-end: 80px;
-    --padding-start: 80px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 80px;
+    padding-right: 80px;
     margin: 0px auto;
   }
 }
@@ -42,12 +42,14 @@ div {
   }
 
   .home-main {
-    background-image: url("../../../assets/boris/cq5dam.web.1280.1280.jpeg");
+    background-image: url("../../../assets/boris/imagemain.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
-    height: 75vh;
+    height: 77vh;
     width: 100%;
+
+    top: 1%;
     ion-col {
     }
     .home-main-col1 {
@@ -167,11 +169,11 @@ h3 {
 }
 .selector:not(*:root),
 .home-main {
-  background-image: url("../../../assets/boris/cq5dam.web.1280.1280.jpeg");
+  background-image: url("../../../assets/boris/imagemain.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
-  height: 70vh;
+  height: 80vh;
   width: 100%;
   ion-col {
   }
@@ -296,4 +298,10 @@ h3 {
 
     // width: 100%;
   }
+}
+
+.card-img-top {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
 }

@@ -67,6 +67,15 @@
     background-size: cover;
     height: 18vh;
     width: 100%;
+    position: relative;
+    // left: 25%;
+    top: 60px;
+    margin-bottom: 4%;
+  }
+  .overview {
+    position: relative;
+    left: 25%;
+    top: 600px;
   }
 }
 
@@ -95,4 +104,13 @@ h3 {
   position: relative;
   left: 25%;
   top: 70%;
+}
+
+.footer-row {
+  padding: 20px;
+  font-size: 12px;
+}
+.site-footer {
+  position: absolute;
+  bottom: 0px;
 }
