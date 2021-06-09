@@ -11,7 +11,8 @@ img {
   text-transform: lowercase;
 }
 ion-content {
-  --background: #f1f1f1;
+  // --background: #f1f1f1;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 small {
@@ -25,21 +26,29 @@ small {
   }
   .intro {
     p {
-      font-size: 20px;
+      font-size: 22px;
+      font-family: "Source Sans Pro", sans-serif;
     }
+  }
+  p {
+    font-size: 22px;
+    font-family: "Source Sans Pro", sans-serif;
   }
 }
 
 .row {
   margin-top: 2%;
-
+  border-bottom: 2px dashed;
   .titre {
     text-align: center;
     text-transform: uppercase;
 
-    font-weight: bold;
     h4 {
       text-decoration: underline;
+      font-weight: 950;
     }
   }
+}
+.two-image {
+  display: flex;
 }

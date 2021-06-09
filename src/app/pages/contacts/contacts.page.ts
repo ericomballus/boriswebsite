@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SocialMediaService } from 'src/app/services/social-media.service';
 
 @Component({
   selector: 'app-contacts',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contacts.page.scss'],
 })
 export class ContactsPage implements OnInit {
-  constructor() {}
+  constructor(public socialMedia: SocialMediaService) {}
 
   ngOnInit() {}
   validate() {
@@ -18,5 +19,20 @@ export class ContactsPage implements OnInit {
       event.stopPropagation();
     }
     form.classList.add('was-validated');
+  }
+
+  openFacebook() {
+    // window.open('https://www.facebook.com/1401408870089080', '_system');
+    this.socialMedia.openFacebook();
+  }
+
+  openTwitter() {
+    this.socialMedia.openTwitter();
+  }
+  openWhatsapp() {
+    this.socialMedia.openWhatsapp();
+  }
+  openInstagram() {
+    this.socialMedia.openInstagram();
   }
 }

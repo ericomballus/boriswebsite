@@ -10,13 +10,9 @@
 
 <ion-grid>
   <ion-row class="header1">
-    <ion-col
-      offset="1"
-      size="2"
-      class="ion-align-self-center ion-padding colflex"
-    >
+    <ion-col offset="1" size="2" class="ion-align-self-center colflex">
       <div class="col1">
-        <div>
+        <div class="col1-item">
           <ion-button
             class="underlinetexte"
             href=""
@@ -27,7 +23,7 @@
             <ion-icon slot="start" name="call-outline"></ion-icon>
           </ion-button>
         </div>
-        <div>
+        <div class="col1-item">
           <ion-button
             fill="clear"
             color="primary"
@@ -41,8 +37,8 @@
       </div>
     </ion-col>
     <ion-col size="5">
-      <div class="ion-text-center mballus">
-        <img src="../../../assets/logo.jpg" />
+      <div class="ion-text-center mballus logo-site">
+        <img src="../../../assets/logosite.jpg" />
       </div>
     </ion-col>
     <ion-col size="4" class="ion-align-self-center"> </ion-col>
@@ -71,7 +67,7 @@
       <div>
         <ion-button
           #productbtn
-          (mouseenter)="dropdown = true"
+          (click)="dropdown = !dropdown"
           (mouseleave)="hideDropdown($event)"
           fill="clear"
           routerDirection="root"
@@ -118,7 +114,7 @@
 
       <ion-button
         #aboutbtn
-        (mouseenter)="about_dropdown = true"
+        (click)="about_dropdown = !about_dropdown"
         (mouseleave)="hideAboutDropdown($event)"
         fill="clear"
         routerLinkActive="active-item"

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Animation, AnimationController } from '@ionic/angular';
 import { ImageLoaderService } from 'src/app/services/image-loader.service';
+import { SocialMediaService } from 'src/app/services/social-media.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
@@ -19,18 +20,29 @@ export class HomePage implements OnInit {
   };
   coverAll: any;
   laDate: Date = new Date();
+  backgroundImages = [
+    '../../../assets/backg/1.jpg',
+    '../../../assets/backg/2.jpg',
+    '../../../assets/backg/3.jpeg',
+    '../../../assets/backg/4.png',
+    '../../../assets/backg/5.jpeg',
+  ];
+
+  chosenImage: string;
+
   constructor(
     private http: HttpClient,
     private animationCtrl: AnimationController,
-    public ImageLoader: ImageLoaderService
+    public ImageLoader: ImageLoaderService,
+    public socialMedia: SocialMediaService
   ) {
     this.coverAll = this.ImageLoader.getData();
-    setTimeout(() => {
-      this.intAnimation();
-    }, 1000);
-    /* setInterval(() => {
-      this.intAnimation();
-    }, 6000);*/
+    (this.chosenImage = '../../../assets/backg/2.jpg'),
+      setInterval(() => {
+        this.chosenImage = this.backgroundImages[
+          Math.floor(Math.random() * this.backgroundImages.length)
+        ];
+      }, 30000);
   }
 
   ngOnInit() {}
@@ -84,5 +96,20 @@ export class HomePage implements OnInit {
         console.log('total coast load');
       });
     });
+  }
+
+  openFacebook() {
+    // window.open('https://www.facebook.com/1401408870089080', '_system');
+    this.socialMedia.openFacebook();
+  }
+
+  openTwitter() {
+    this.socialMedia.openTwitter();
+  }
+  openWhatsapp() {
+    this.socialMedia.openWhatsapp();
+  }
+  openInstagram() {
+    this.socialMedia.openInstagram();
   }
 }

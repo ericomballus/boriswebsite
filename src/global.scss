@@ -26,6 +26,9 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 @media (min-width: 768px) {
+  ion-content {
+    font-family: "Source Sans Pro", sans-serif;
+  }
   .center-contain {
     // --background: #e9e9e9;
     padding-left: 150px;
@@ -61,7 +64,7 @@
 }
 @-moz-document url-prefix() {
   .hero {
-    //background-image: url("../src/assets/boris/IMG-20210519-WA0030.jpg");
+    background-image: url("../src/assets/banner.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -69,24 +72,30 @@
     width: 100%;
     position: relative;
     // left: 25%;
-    top: 60px;
+    top: 0%;
     margin-bottom: 4%;
+    ion-grid {
+      ion-row {
+        position: relative;
+        // top: 9%;
+      }
+    }
   }
   .overview {
-    position: relative;
-    left: 25%;
-    top: 600px;
+    // position: relative;
+    // left: 25%;
+    // top: 90%;
   }
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
   .hero {
-    background-image: url("../src/assets/boris/IMG-20210519-WA0030.jpg");
+    background-image: url("../src/assets/banner.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 18vh;
-    width: 100%;
+    // height: 18vh;
+    // width: 100%;
   }
 }
 
@@ -101,9 +110,9 @@ h3 {
 }
 
 .overview {
-  position: relative;
-  left: 25%;
-  top: 70%;
+  // position: relative;
+  //left: 25%;
+  //top: 70%;
 }
 
 .footer-row {
@@ -111,6 +120,32 @@ h3 {
   font-size: 12px;
 }
 .site-footer {
-  position: absolute;
+  // position: absolute;
   bottom: 0px;
+}
+.selector:not(*:root),
+.hero {
+  background-image: url("../src/assets/banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 18vh;
+  width: 100%;
+  position: relative;
+  // left: 25%;
+  top: 0px;
+  margin-bottom: 4%;
+}
+
+.selector:not(*:root),
+.overview {
+  position: relative;
+  left: 25%;
+  // top: 500%;
+}
+ion-footer {
+  position: relative;
+  top: 100%;
+  left: 0px;
+  width: 100%;
 }

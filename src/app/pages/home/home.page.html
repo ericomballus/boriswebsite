@@ -1,7 +1,10 @@
 <ion-content>
   <div class="content">
     <ion-grid>
-      <ion-row class="home-main">
+      <ion-row
+        class="home-main"
+        [ngStyle]="{'background-image': chosenImage ? ' url( '+ chosenImage + ')' : ''}"
+      >
         <ion-col size="12" class="home-main-col1">
           <div class="ion-text-uppercase ion-text-center">
             <div class="home-main-div-section">
@@ -20,7 +23,8 @@
                 src="../../../assets/boris/sensibilisation cancer.jpeg"
               />
               <p>
-                <a href=""> sensibilisation on cervical cancer</a><br />
+                <a routerLink="/activity"> sensibilisation on cervical cancer</a
+                ><br />
                 <small> more information about...</small>
               </p>
             </div>
@@ -33,7 +37,7 @@
                 src="../../../assets/boris/IMG-20210519-WA0030.jpg"
               />
               <p>
-                <a href=""> Free screening children</a><br />
+                <a routerLink="/activity"> Free screening children</a><br />
                 <small> more information about...</small>
               </p>
             </div>
@@ -46,7 +50,7 @@
                 src="../../../assets/boris/WhatsApp Image 2021-05-24 at 11.52.51.jpeg"
               />
               <p>
-                <a href="">Cervical cancer screening</a><br />
+                <a routerLink="/activity">Cervical cancer screening</a><br />
                 <small> more information about...</small>
               </p>
             </div>
@@ -59,7 +63,7 @@
                 src="../../../assets/boris/consultation (3).jpg"
               />
               <p>
-                <a href="">free ophtalmologie</a><br />
+                <a routerLink="/activity">free ophtalmologie</a><br />
                 <small> more information about...</small>
               </p>
             </div>
@@ -69,104 +73,59 @@
 
       <ion-row>
         <ion-col size="12">
-          <div class="ion-text-uppercase ion-text-center">
-            <h2>Get Information Now</h2>
+          <div class="ion-text-center">
+            <h2>Get information now</h2>
           </div>
         </ion-col>
         <ion-col>
-          <div class="ion-text-center ion-text-uppercase ion-text-center">
-            <h4>Cancer Information and Resources</h4>
-            G.A.H.H.C advocates for health and humanisation care Registered N° :
+          <div class="ion-text-center ion-text-lowercase ion-text-center">
+            <h4>Cancer information and resources</h4>
+            G.A.H.H.C advocates for health and humanisation care registered N° :
           </div>
         </ion-col>
       </ion-row>
     </ion-grid>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-lg-3">
-          <div class="card h-100">
-            <img
-              src="../../../assets/boris/consultation (1).jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Dantal consultations</h5>
-              <p class="card-text"></p>
-              <p class="card-text">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-lg-3">
-          <div class="card h-100">
-            <img
-              src="../../../assets/boris/imagemain.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">General consultation by GAHHC staff</h5>
-              <p class="card-text"></p>
-              <p class="card-text">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-lg-3">
-          <div class="card h-100">
-            <img
-              src="../../../assets/boris/pyg.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Children and older persons</h5>
-              <p class="card-text"></p>
-              <p class="card-text">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-lg-3">
-          <div class="card h-100">
-            <img
-              src="../../../assets/boris/consultation (3).jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Free ophtalmologie</h5>
-              <p class="card-text"></p>
-              <p class="card-text">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
   <ion-footer>
     <ion-toolbar color="dark">
       <ion-row class="footer-row">
-        <ion-col size="1">HELP</ion-col>
-        <ion-col size="1">SITE MAP</ion-col>
-        <ion-col size="1">PRIVACY POLICY</ion-col>
-        <ion-col size="1">ACCESSIBILITY</ion-col>
-        <ion-col size="1">TERMS OF USE</ion-col>
-        <ion-col size="1">STATE FUNDRAISING NOTICES</ion-col>
-        <ion-col size="1">SITE COMMENTS</ion-col>
+        <ion-col size="2">
+          <ion-button color="light" fill="clear">
+            JOIN US ON:
+          </ion-button></ion-col
+        >
+        <ion-col size="1">
+          <ion-button (click)="openFacebook()" fill="clear">
+            <ion-icon slot="start" name="logo-facebook"></ion-icon>
+            facebook
+          </ion-button>
+        </ion-col>
+        <ion-col size="1">
+          <ion-button (click)="openTwitter()" fill="clear">
+            <ion-icon slot="start" name="logo-twitter"></ion-icon>
+            twitter
+          </ion-button>
+        </ion-col>
+        <ion-col size="1">
+          <ion-button color="success" (click)="openWhatsapp()" fill="clear">
+            <ion-icon slot="start" name="logo-whatsapp"></ion-icon>
+            whatsapp
+          </ion-button>
+        </ion-col>
+        <ion-col size="1"
+          ><ion-button color="danger" (click)="openInstagram()" fill="clear">
+            <ion-icon slot="start" name="logo-instagram"></ion-icon>
+            instagram
+          </ion-button></ion-col
+        >
+
+        <ion-col size="1"></ion-col>
+        <ion-col size="1"></ion-col>
         <ion-col>
           <div>
             <p>
-              © 2021 American Cancer Society, Inc. All rights reserved. The
-              American Cancer Society is a qualified 501(c)(3) tax-exempt
-              organization. Tax ID Number: 13-1788491. Cancer.org is provided
-              courtesy of the Leo and Gloria Rosen family.
+              © 2021 GAHHC, Inc. All rights reserved. The GAHHC is a qualified
+              501(c)(3) tax-exempt organization.
             </p>
           </div>
         </ion-col>

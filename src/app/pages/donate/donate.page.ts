@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ICreateOrderRequest, IPayPalConfig } from 'ngx-paypal';
+import { SocialMediaService } from 'src/app/services/social-media.service';
 @Component({
   selector: 'app-donate',
   templateUrl: './donate.page.html',
@@ -8,7 +9,7 @@ import { ICreateOrderRequest, IPayPalConfig } from 'ngx-paypal';
 export class DonatePage implements OnInit {
   public payPalConfig?: IPayPalConfig;
   title = 'simple-bootstarp-validation-angular';
-  constructor() {}
+  constructor(public socialMedia: SocialMediaService) {}
 
   ngOnInit() {
     this.initConfig();
@@ -98,5 +99,20 @@ export class DonatePage implements OnInit {
       event.stopPropagation();
     }
     form.classList.add('was-validated');
+  }
+
+  openFacebook() {
+    // window.open('https://www.facebook.com/1401408870089080', '_system');
+    this.socialMedia.openFacebook();
+  }
+
+  openTwitter() {
+    this.socialMedia.openTwitter();
+  }
+  openWhatsapp() {
+    this.socialMedia.openWhatsapp();
+  }
+  openInstagram() {
+    this.socialMedia.openInstagram();
   }
 }

@@ -1,7 +1,7 @@
 <ion-content class="bg">
   <div class="hero">
     <ion-grid>
-      <ion-row>
+      <ion-row class="row-overview">
         <ion-col>
           <div class="ion-text-uppercase overview">
             <h3>activities</h3>
@@ -13,19 +13,18 @@
   </div>
   <ion-grid>
     <ion-row>
-      <ion-col offset-lg="3" offset-md="1" size="12" size-lg="5" size-md="10">
+      <ion-col offset-lg="1" offset-md="1" size="12" size-lg="10" size-md="10">
         <div class="intro">
           <p>
             Most activities are carried out at the peripheries , with an
             inderprivileged population, facing lack of information and difficult
-            accessibility
+            accessibility a few site amongst many others are :
           </p>
-          <p>A few site amongst many others are :</p>
         </div>
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col offset-lg="3" offset-md="1" size="12" size-lg="5" size-md="10">
+      <ion-col offset-lg="1" offset-md="1" size="12" size-lg="10" size-md="10">
         <div>
           <p>
             <small>Salapoumb</small>, located at the eastern ragion of cameroon
@@ -52,7 +51,7 @@
           <img src="../../../assets/boris/IMG-20210519-WA0029.jpg" alt="" />
 
           <div class="card-body">
-            <p class="card-text text-uppercase text-center">
+            <p class="card-text text-center">
               Sensitization on cervical cancer
             </p>
           </div>
@@ -60,12 +59,18 @@
       </div>
       <div class="col-4 col-sm-6 col-lg-6 col-md-6">
         <div class="card">
-          <img src="../../../assets/boris/imageleft.jpg" alt="" />
+          <div class="two-image">
+            <div>
+              <img
+                src="../../../assets/boris/WhatsApp Image 2021-05-24 at 11.52.51.jpeg"
+                alt=""
+              />
+            </div>
+            <div><img src="../../../assets/boris/imageleft.jpg" alt="" /></div>
+          </div>
 
           <div class="card-body">
-            <p class="card-text text-uppercase text-center">
-              Free cervical cancer screening
-            </p>
+            <p class="card-text text-center">Free cervical cancer screening</p>
           </div>
         </div>
       </div>
@@ -74,7 +79,7 @@
         <div class="card">
           <img src="../../../assets/boris/IMG-20210519-WA0031.jpg" alt="" />
           <div class="card-body">
-            <p class="card-text text-uppercase text-center">consultation</p>
+            <p class="card-text  text-center">consultation</p>
           </div>
         </div>
       </div>
@@ -89,9 +94,7 @@
           <img src="../../../assets/boris/consultation (3).jpg" alt="" />
 
           <div class="card-body">
-            <p class="card-text text-uppercase text-center">
-              Ophtamology consultation
-            </p>
+            <p class="card-text text-center">Ophtamology consultation</p>
           </div>
         </div>
       </div>
@@ -99,9 +102,7 @@
         <div class="card">
           <img src="../../../assets/boris/consultation (1).jpg" alt="" />
           <div class="card-body">
-            <p class="card-text text-uppercase text-center">
-              Dantal consultations
-            </p>
+            <p class="card-text text-center">Dantal consultations</p>
           </div>
         </div>
       </div>
@@ -113,7 +114,7 @@
           <img src="../../../assets/boris/covid19.jpg" alt="" />
 
           <div class="card-body">
-            <p class="card-text text-uppercase text-center"></p>
+            <p class="card-text text-center"></p>
           </div>
         </div>
       </div>
@@ -121,7 +122,7 @@
         <div class="card">
           <img src="../../../assets/boris/sensibilisation cancer.jpeg" alt="" />
           <div class="card-body">
-            <p class="card-text text-uppercase text-center"></p>
+            <p class="card-text text-center"></p>
           </div>
         </div>
       </div>
@@ -139,7 +140,7 @@
           <img src="../../../assets/boris/pyg.jpg" alt="" />
 
           <div class="card-body">
-            <p class="card-text text-uppercase text-center"></p>
+            <p class="card-text text-center"></p>
           </div>
         </div>
       </div>
@@ -147,7 +148,7 @@
         <div class="card">
           <img src="../../../assets/boris/pyg2.jpg" alt="" />
           <div class="card-body">
-            <p class="card-text text-uppercase text-center"></p>
+            <p class="card-text text-center"></p>
           </div>
         </div>
       </div>
@@ -165,7 +166,7 @@
           <img class="rounded" src="../../../assets/boris/covid19.jpg" alt="" />
 
           <div class="card-body">
-            <p class="card-text text-uppercase text-center"></p>
+            <p class="card-text text-center"></p>
           </div>
         </div>
       </div>
@@ -178,20 +179,43 @@
   <ion-footer>
     <ion-toolbar color="dark">
       <ion-row class="footer-row">
-        <ion-col size="1">HELP</ion-col>
-        <ion-col size="1">SITE MAP</ion-col>
-        <ion-col size="1">PRIVACY POLICY</ion-col>
-        <ion-col size="1">ACCESSIBILITY</ion-col>
-        <ion-col size="1">TERMS OF USE</ion-col>
-        <ion-col size="1">STATE FUNDRAISING NOTICES</ion-col>
-        <ion-col size="1">SITE COMMENTS</ion-col>
+        <ion-col size="2">
+          <ion-button color="light" fill="clear">
+            JOIN US ON:
+          </ion-button></ion-col
+        >
+        <ion-col size="1">
+          <ion-button (click)="openFacebook()" fill="clear">
+            <ion-icon slot="start" name="logo-facebook"></ion-icon>
+            facebook
+          </ion-button>
+        </ion-col>
+        <ion-col size="1">
+          <ion-button (click)="openTwitter()" fill="clear">
+            <ion-icon slot="start" name="logo-twitter"></ion-icon>
+            twitter
+          </ion-button>
+        </ion-col>
+        <ion-col size="1">
+          <ion-button color="success" (click)="openWhatsapp()" fill="clear">
+            <ion-icon slot="start" name="logo-whatsapp"></ion-icon>
+            whatsapp
+          </ion-button>
+        </ion-col>
+        <ion-col size="1"
+          ><ion-button color="danger" (click)="openInstagram()" fill="clear">
+            <ion-icon slot="start" name="logo-instagram"></ion-icon>
+            instagram
+          </ion-button></ion-col
+        >
+
+        <ion-col size="1"></ion-col>
+        <ion-col size="1"></ion-col>
         <ion-col>
           <div>
             <p>
-              © 2021 American Cancer Society, Inc. All rights reserved. The
-              American Cancer Society is a qualified 501(c)(3) tax-exempt
-              organization. Tax ID Number: 13-1788491. Cancer.org is provided
-              courtesy of the Leo and Gloria Rosen family.
+              © 2021 GAHHC, Inc. All rights reserved. The GAHHC is a qualified
+              501(c)(3) tax-exempt organization.
             </p>
           </div>
         </ion-col>

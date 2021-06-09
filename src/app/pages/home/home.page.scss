@@ -13,6 +13,7 @@
     padding-left: 80px;
     padding-right: 80px;
     margin: 0px auto;
+    font-family: "Source Sans Pro", sans-serif;
   }
 }
 
@@ -42,7 +43,7 @@ div {
   }
 
   .home-main {
-    background-image: url("../../../assets/boris/imagemain.jpg");
+    background-image: url("../../../assets/boris/newmain.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
@@ -55,13 +56,14 @@ div {
     .home-main-col1 {
       height: 50%;
       margin-top: 10%;
-      color: rgb(235, 33, 33);
+      color: white;
       position: relative;
       top: 20%;
     }
     .home-main-div-section {
       font-size: 15px;
       margin-bottom: 20px;
+      font-weight: 1000;
     }
     .textedumilieu {
     }
@@ -143,7 +145,7 @@ div {
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
   .hero {
-    background-image: url("../../../assets/boris/cq5dam.web.1280.1280.jpeg");
+    // background-image: url("../../../assets/backg/1");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -168,8 +170,9 @@ h3 {
   top: 70%;
 }
 .selector:not(*:root),
+.selector:not(*:root),
 .home-main {
-  background-image: url("../../../assets/boris/imagemain.jpg");
+  //  background-image: url("../../../assets/boris/newmain.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -180,15 +183,9 @@ h3 {
   .home-main-col1 {
     height: 50%;
     margin-top: 10%;
-    color: rgb(235, 33, 33);
+    color: white;
     position: relative;
     top: 15%;
-  }
-  .home-main-div-section {
-    font-size: 25px;
-    margin-bottom: 20px;
-  }
-  .textedumilieu {
   }
 }
 .selector:not(*:root),
@@ -223,7 +220,8 @@ h3 {
     .home-main-div-section {
       font-size: 30px;
       margin-bottom: 20px;
-      color: rgb(245, 48, 48);
+      color: white;
+      font-weight: 1000;
     }
     .textedumilieu {
       font-size: 20px;

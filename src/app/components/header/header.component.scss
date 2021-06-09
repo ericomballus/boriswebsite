@@ -68,7 +68,7 @@
           img {
             height: 50% !important;
             object-fit: cover;
-            width: 12% !important;
+            width: 32% !important;
           }
         }
       }
@@ -193,7 +193,7 @@
   border: 1px solid #3a3939;
   position: relative;
 
-  top: -35px;
+  top: -15px;
   // bottom: 1px;
 
   ion-col .mybtn {
@@ -224,7 +224,7 @@
 .selector:not(*:root),
 .last-row {
   position: relative;
-  top: -55px;
+  top: -34px;
   // left: 35%;
   // background-color: rgb(255, 0, 191);
   // width: 15%;
@@ -273,7 +273,7 @@
     img {
       height: 100%;
       object-fit: cover;
-      width: 15%;
+      width: 35%;
     }
   }
 }
@@ -292,4 +292,17 @@
   margin: 0px;
   padding: 0px;
   position: absolute;
+}
+.col1 {
+  width: 100%;
+  // border: 1px solid black;
+
+  .col1-item {
+    //flex: 1 1 0;
+    // width: 0;
+    // padding: 10px;
+    ion-button {
+      //  font-size: 12px;
+    }
+  }
 }

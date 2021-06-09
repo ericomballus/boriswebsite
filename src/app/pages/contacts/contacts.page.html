@@ -127,20 +127,43 @@
   <ion-footer>
     <ion-toolbar color="dark">
       <ion-row class="footer-row">
-        <ion-col size="1">HELP</ion-col>
-        <ion-col size="1">SITE MAP</ion-col>
-        <ion-col size="1">PRIVACY POLICY</ion-col>
-        <ion-col size="1">ACCESSIBILITY</ion-col>
-        <ion-col size="1">TERMS OF USE</ion-col>
-        <ion-col size="1">STATE FUNDRAISING NOTICES</ion-col>
-        <ion-col size="1">SITE COMMENTS</ion-col>
+        <ion-col size="2">
+          <ion-button color="light" fill="clear">
+            JOIN US ON:
+          </ion-button></ion-col
+        >
+        <ion-col size="1">
+          <ion-button (click)="openFacebook()" fill="clear">
+            <ion-icon slot="start" name="logo-facebook"></ion-icon>
+            facebook
+          </ion-button>
+        </ion-col>
+        <ion-col size="1">
+          <ion-button (click)="openTwitter()" fill="clear">
+            <ion-icon slot="start" name="logo-twitter"></ion-icon>
+            twitter
+          </ion-button>
+        </ion-col>
+        <ion-col size="1">
+          <ion-button color="success" (click)="openWhatsapp()" fill="clear">
+            <ion-icon slot="start" name="logo-whatsapp"></ion-icon>
+            whatsapp
+          </ion-button>
+        </ion-col>
+        <ion-col size="1"
+          ><ion-button color="danger" (click)="openInstagram()" fill="clear">
+            <ion-icon slot="start" name="logo-instagram"></ion-icon>
+            instagram
+          </ion-button></ion-col
+        >
+
+        <ion-col size="1"></ion-col>
+        <ion-col size="1"></ion-col>
         <ion-col>
           <div>
             <p>
-              © 2021 American Cancer Society, Inc. All rights reserved. The
-              American Cancer Society is a qualified 501(c)(3) tax-exempt
-              organization. Tax ID Number: 13-1788491. Cancer.org is provided
-              courtesy of the Leo and Gloria Rosen family.
+              © 2021 GAHHC, Inc. All rights reserved. The GAHHC is a qualified
+              501(c)(3) tax-exempt organization.
             </p>
           </div>
         </ion-col>

@@ -33,3 +33,12 @@ ion-grid {
   width: 800px;
   /* Whatever width you want */
 }
+
+.bg-donate {
+  background-image: url("../../../assets/boris/pyg.jpg");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+}
