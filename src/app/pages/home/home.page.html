@@ -1,4 +1,4 @@
-<ion-content>
+<ion-content class="desktop">
   <div class="content">
     <ion-grid>
       <ion-row
@@ -80,7 +80,8 @@
         <ion-col>
           <div class="ion-text-center ion-text-lowercase ion-text-center">
             <h4>Cancer information and resources</h4>
-            G.A.H.H.C advocates for health and humanisation care registered N° :
+            <small style="text-transform: uppercase">G.A.H.H.C</small>advocates
+            for health and humanisation care registered N° :
           </div>
         </ion-col>
       </ion-row>
@@ -89,40 +90,361 @@
   <ion-footer>
     <ion-toolbar color="dark">
       <ion-row class="footer-row">
-        <ion-col size="2">
-          <ion-button color="light" fill="clear">
+        <ion-col sizeLg="2" sizeMd="2" sizeSm="12" sizeXs="12">
+          <ion-button style="color: white" fill="clear">
             JOIN US ON:
           </ion-button></ion-col
         >
-        <ion-col size="1">
-          <ion-button (click)="openFacebook()" fill="clear">
+        <ion-col sizeLg="1" sizeMd="1" sizeSm="6" sizeXs="6">
+          <ion-button
+            style="color: white"
+            (click)="openFacebook()"
+            fill="clear"
+          >
             <ion-icon slot="start" name="logo-facebook"></ion-icon>
             facebook
           </ion-button>
         </ion-col>
-        <ion-col size="1">
-          <ion-button (click)="openTwitter()" fill="clear">
+        <ion-col sizeLg="1" sizeMd="1" sizeSm="6" sizeXs="6">
+          <ion-button style="color: white" (click)="openTwitter()" fill="clear">
             <ion-icon slot="start" name="logo-twitter"></ion-icon>
             twitter
           </ion-button>
         </ion-col>
-        <ion-col size="1">
-          <ion-button color="success" (click)="openWhatsapp()" fill="clear">
+        <ion-col sizeLg="1" sizeMd="1" sizeSm="6" sizeXs="6">
+          <ion-button
+            style="color: white"
+            (click)="openWhatsapp()"
+            fill="clear"
+          >
             <ion-icon slot="start" name="logo-whatsapp"></ion-icon>
             whatsapp
           </ion-button>
         </ion-col>
-        <ion-col size="1"
-          ><ion-button color="danger" (click)="openInstagram()" fill="clear">
+        <ion-col sizeLg="1" sizeMd="1" sizeSm="6" sizeXs="6"
+          ><ion-button
+            style="color: white"
+            (click)="openInstagram()"
+            fill="clear"
+          >
             <ion-icon slot="start" name="logo-instagram"></ion-icon>
             instagram
           </ion-button></ion-col
         >
 
-        <ion-col size="1"></ion-col>
-        <ion-col size="1"></ion-col>
+        <ion-col sizeLg="1" sizeMd="1" sizeSm="6" sizeXs="6"> </ion-col>
+        <ion-col sizeLg="1" sizeMd="1" sizeSm="6" sizeXs="6">
+          <ion-button
+            style="color: white"
+            (click)="openInstagram()"
+            fill="clear"
+          >
+            <ion-icon slot="start" name="call-outline"></ion-icon>
+            TEL:+237 699 641 013
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row class="footer-secondRow" style="text-align: center">
+        <ion-col
+          sizeLg="1"
+          sizeMd="1"
+          sizeSm="12"
+          sizeXs="12"
+          class="ion-align-self-center"
+          ><a href="">HELP</a></ion-col
+        >
+        <ion-col
+          sizeLg="1"
+          sizeMd="1"
+          sizeSm="12"
+          sizeXs="12"
+          class="ion-align-self-center"
+        >
+          <a href="">SITE MAP</a>
+        </ion-col>
+        <ion-col
+          sizeLg="1"
+          sizeMd="1"
+          sizeSm="12"
+          sizeXs="12"
+          class="ion-align-self-center"
+        >
+          <a href="">PRIVACY POLICY</a>
+        </ion-col>
+        <ion-col
+          sizeLg="1"
+          sizeMd="1"
+          sizeSm="12"
+          sizeXs="12"
+          class="ion-align-self-center"
+        >
+          <a href="">ACCESSIBILITY</a>
+        </ion-col>
+        <ion-col
+          sizeLg="1"
+          sizeMd="1"
+          sizeSm="12"
+          sizeXs="12"
+          class="ion-align-self-center"
+        >
+          <a href="">TERMS OF USE</a>
+        </ion-col>
+        <ion-col
+          sizeLg="1"
+          sizeMd="1"
+          sizeSm="12"
+          sizeXs="12"
+          class="ion-align-self-center"
+        >
+          <a href="">STATE FUNDRAISING</a>
+        </ion-col>
+        <ion-col
+          sizeLg="1"
+          sizeMd="1"
+          sizeSm="12"
+          sizeXs="12"
+          class="ion-align-self-center"
+        >
+          <a href="">SITE COMMENTS</a>
+        </ion-col>
+        <ion-col
+          sizeLg="5"
+          sizeMd="8"
+          sizeSm="12"
+          sizeXs="12"
+          class="ion-align-self-center"
+        >
+          <div class="ion-text-center">
+            <p>
+              © 2021 GAHHC, Inc. All rights reserved. The GAHHC is a qualified
+              501(c)(3) tax-exempt organization.
+            </p>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
+
+<!-- view for mobile -->
+
+<ion-content class="mobile-view">
+  <div>
+    <ion-grid>
+      <ion-row
+        class="home-main"
+        [ngStyle]="{'background-image': chosenImage ? ' url( '+ chosenImage + ')' : ''}"
+      >
+        <ion-col size="12" class="home-main-col1">
+          <div class="ion-text-uppercase ion-text-center">
+            <div class="home-main-div-section">
+              global association of health and humanitarian care
+            </div>
+            <ion-button class="textedumilieu">STOP CERVICAL CANCER</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+      <div class="div-inner">
+        <div class="home-main-col2">
+          <div class="container1 col-4 col-sm-6 col-md-6">
+            <div class="image">
+              <img
+                class="container_img"
+                src="../../../assets/boris/sensibilisation cancer.jpeg"
+              />
+              <p>
+                <a routerLink="/activity"> sensibilisation on cervical cancer</a
+                ><br />
+                <small> more information about...</small>
+              </p>
+            </div>
+          </div>
+
+          <div class="container1 col-sm-6 col-md-6">
+            <div class="image">
+              <img
+                class="container_img"
+                src="../../../assets/boris/IMG-20210519-WA0030.jpg"
+              />
+              <p>
+                <a routerLink="/activity"> Free screening children</a><br />
+                <small> more information about...</small>
+              </p>
+            </div>
+          </div>
+
+          <div class="container1 col-sm-6 col-md-6">
+            <div class="image">
+              <img
+                class="container_img"
+                src="../../../assets/boris/WhatsApp Image 2021-05-24 at 11.52.51.jpeg"
+              />
+              <p>
+                <a routerLink="/activity">Cervical cancer screening</a><br />
+                <small> more information about...</small>
+              </p>
+            </div>
+          </div>
+
+          <div class="container1 col-sm-6 col-md-6">
+            <div class="image">
+              <img
+                class="container_img"
+                src="../../../assets/boris/consultation (3).jpg"
+              />
+              <p>
+                <a routerLink="/activity">free ophtalmologie</a><br />
+                <small> more information about...</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ion-row>
+        <ion-col size="12">
+          <div class="ion-text-center">
+            <h2>Get information now</h2>
+          </div>
+        </ion-col>
         <ion-col>
-          <div>
+          <div class="ion-text-center ion-text-lowercase ion-text-center">
+            <h4>Cancer information and resources</h4>
+            <small style="text-transform: uppercase">G.A.H.H.C</small> advocates
+            for health and humanisation care registered N° :
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-footer>
+    <ion-toolbar color="dark">
+      <ion-row class="footer-row">
+        <ion-col sizeLg="2" sizeMd="2" sizeSm="12" sizeXs="12">
+          <ion-button style="color: white" fill="clear">
+            JOIN US ON:
+          </ion-button></ion-col
+        >
+        <ion-col sizeLg="1" sizeMd="1" sizeSm="6" sizeXs="6">
+          <ion-button
+            style="color: white"
+            (click)="openFacebook()"
+            fill="clear"
+          >
+            <ion-icon slot="start" name="logo-facebook"></ion-icon>
+            facebook
+          </ion-button>
+        </ion-col>
+        <ion-col sizeLg="1" sizeMd="1" sizeSm="6" sizeXs="6">
+          <ion-button style="color: white" (click)="openTwitter()" fill="clear">
+            <ion-icon slot="start" name="logo-twitter"></ion-icon>
+            twitter
+          </ion-button>
+        </ion-col>
+        <ion-col sizeLg="1" sizeMd="1" sizeSm="6" sizeXs="6">
+          <ion-button
+            style="color: white"
+            (click)="openWhatsapp()"
+            fill="clear"
+          >
+            <ion-icon slot="start" name="logo-whatsapp"></ion-icon>
+            whatsapp
+          </ion-button>
+        </ion-col>
+        <ion-col sizeLg="1" sizeMd="1" sizeSm="6" sizeXs="6"
+          ><ion-button
+            style="color: white"
+            (click)="openInstagram()"
+            fill="clear"
+          >
+            <ion-icon slot="start" name="logo-instagram"></ion-icon>
+            instagram
+          </ion-button></ion-col
+        >
+
+        <ion-col sizeLg="1" sizeMd="1" sizeSm="6" sizeXs="6"> </ion-col>
+        <ion-col sizeLg="1" sizeMd="1" sizeSm="6" sizeXs="6">
+          <ion-button
+            style="color: white"
+            (click)="openInstagram()"
+            fill="clear"
+          >
+            <ion-icon slot="start" name="call-outline"></ion-icon>
+            TEL:+237 699 641 013
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row class="footer-secondRow" style="text-align: center">
+        <ion-col
+          sizeLg="1"
+          sizeMd="1"
+          sizeSm="12"
+          sizeXs="12"
+          class="ion-align-self-center"
+          ><a href="">HELP</a></ion-col
+        >
+        <ion-col
+          sizeLg="1"
+          sizeMd="1"
+          sizeSm="12"
+          sizeXs="12"
+          class="ion-align-self-center"
+        >
+          <a href="">SITE MAP</a>
+        </ion-col>
+        <ion-col
+          sizeLg="1"
+          sizeMd="1"
+          sizeSm="12"
+          sizeXs="12"
+          class="ion-align-self-center"
+        >
+          <a href="">PRIVACY POLICY</a>
+        </ion-col>
+        <ion-col
+          sizeLg="1"
+          sizeMd="1"
+          sizeSm="12"
+          sizeXs="12"
+          class="ion-align-self-center"
+        >
+          <a href="">ACCESSIBILITY</a>
+        </ion-col>
+        <ion-col
+          sizeLg="1"
+          sizeMd="1"
+          sizeSm="12"
+          sizeXs="12"
+          class="ion-align-self-center"
+        >
+          <a href="">TERMS OF USE</a>
+        </ion-col>
+        <ion-col
+          sizeLg="1"
+          sizeMd="1"
+          sizeSm="12"
+          sizeXs="12"
+          class="ion-align-self-center"
+        >
+          <a href="">STATE FUNDRAISING</a>
+        </ion-col>
+        <ion-col
+          sizeLg="1"
+          sizeMd="1"
+          sizeSm="12"
+          sizeXs="12"
+          class="ion-align-self-center"
+        >
+          <a href="">SITE COMMENTS</a>
+        </ion-col>
+        <ion-col
+          sizeLg="5"
+          sizeMd="8"
+          sizeSm="12"
+          sizeXs="12"
+          class="ion-align-self-center"
+        >
+          <div class="ion-text-center">
             <p>
               © 2021 GAHHC, Inc. All rights reserved. The GAHHC is a qualified
               501(c)(3) tax-exempt organization.

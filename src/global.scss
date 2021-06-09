@@ -25,7 +25,16 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+}
+
 @media (min-width: 768px) {
+  .mobile-view {
+    display: none;
+  }
   ion-content {
     font-family: "Source Sans Pro", sans-serif;
   }
@@ -51,6 +60,21 @@
       position: relative;
       bottom: 50px;
       // --background: blueviolet;
+    }
+  }
+
+  .footer-row {
+    padding: 20px;
+    font-size: 12px;
+    background-color: rgb(4, 4, 110);
+  }
+  .site-footer {
+    // position: absolute;
+    bottom: 0px;
+  }
+  ion-footer {
+    p {
+      font-size: 10px;
     }
   }
 }
@@ -115,14 +139,6 @@ h3 {
   //top: 70%;
 }
 
-.footer-row {
-  padding: 20px;
-  font-size: 12px;
-}
-.site-footer {
-  // position: absolute;
-  bottom: 0px;
-}
 .selector:not(*:root),
 .hero {
   background-image: url("../src/assets/banner.jpg");
@@ -143,9 +159,12 @@ h3 {
   left: 25%;
   // top: 500%;
 }
-ion-footer {
-  position: relative;
-  top: 100%;
-  left: 0px;
-  width: 100%;
+.footer-secondRow {
+  padding: 20px;
+  font-size: 12px;
+  ion-col a {
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+  }
 }

@@ -41,10 +41,10 @@
   }
 
   @-moz-document url-prefix() {
-    .row-traduction {
+    .desktop .row-traduction {
       position: relative;
-      bottom: 65px;
-      left: 55%;
+      bottom: 25px;
+      left: 58%;
     }
     ion-grid .last-row {
       position: relative;
@@ -54,6 +54,8 @@
       margin: 0px;
     }
     .header1 {
+      position: relative;
+      top: 20px;
       ion-col {
         max-height: 10% !important;
 
@@ -66,12 +68,21 @@
             font-weight: bold;
           }
           img {
-            height: 50% !important;
+            height: 60% !important;
             object-fit: cover;
-            width: 32% !important;
+            width: 40% !important;
           }
         }
       }
+    }
+    .logo-site {
+      position: relative;
+      bottom: 20px;
+    }
+
+    .phone {
+      position: relative;
+      top: 20px;
     }
     .newheader {
       width: 100% !important;
@@ -145,14 +156,26 @@
 }
 
 @media (max-width: 768px) {
+  .logo-mobile {
+    ion-img {
+      height: 100%;
+      object-fit: cover;
+      width: 35%;
+      position: relative;
+      left: 30%;
+    }
+  }
+
   .mobile-header {
     display: block;
   }
-
   .header {
     display: none;
   }
   .header1 {
+    display: none;
+  }
+  .desktop {
     display: none;
   }
 }

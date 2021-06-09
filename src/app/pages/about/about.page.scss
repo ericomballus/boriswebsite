@@ -34,3 +34,16 @@ ion-item {
     font-size: 22px;
   }
 }
+@media (min-width: 768px) {
+  @-moz-document url-prefix() {
+    .g2-activity {
+      position: relative;
+      bottom: 70px;
+    }
+  }
+
+  .g2-activity {
+    position: relative;
+    bottom: 70px;
+  }
+}

@@ -20,6 +20,11 @@ small {
 }
 
 @media (min-width: 768px) {
+  ion-footer {
+    p {
+      font-size: 10px;
+    }
+  }
   small {
     font-weight: bold;
     font-size: 18px;
@@ -38,7 +43,7 @@ small {
 
 .row {
   margin-top: 2%;
-  border-bottom: 2px dashed;
+  border-bottom: 1px dashed #999797;
   .titre {
     text-align: center;
     text-transform: uppercase;
@@ -51,4 +56,36 @@ small {
 }
 .two-image {
   display: flex;
+}
+
+@media (min-width: 768px) {
+  .card {
+    // width: 100%;
+  }
+  .titre {
+    margin-bottom: 2%;
+  }
+  @-moz-document url-prefix() {
+    .g2-activity {
+      position: relative;
+      bottom: 70px;
+    }
+    .container {
+      position: relative;
+      bottom: 80px;
+    }
+  }
+  .selector:not(*:root),
+  .g2-activity {
+    position: relative;
+    bottom: 85px;
+  }
+  .selector:not(*:root),
+  .container {
+    position: relative;
+    bottom: 90px;
+  }
+}
+.card {
+  border: none;
 }
