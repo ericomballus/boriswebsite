@@ -25,11 +25,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('../about/about.module').then((m) => m.AboutPageModule),
       },
-      {
-        path: 'donate',
-        loadChildren: () =>
-          import('../donate/donate.module').then((m) => m.DonatePageModule),
-      },
+      /*{
+      path: 'donate',
+      loadChildren: () =>
+        import('../donate/donate.module').then((m) => m.DonatePageModule),
+    },*/
       {
         path: 'activity',
         loadChildren: () =>

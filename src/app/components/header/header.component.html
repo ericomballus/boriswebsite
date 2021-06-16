@@ -9,8 +9,7 @@
     <ion-button
       slot="end"
       color="danger"
-      routerLink="/donate"
-      routerDirection="root"
+      (click)="router.navigateByUrl('/donate')"
     >
       <ion-icon slot="start" name="heart-outline"></ion-icon>
       {{ "MENU.Donate" | translate }}</ion-button
@@ -53,6 +52,7 @@
     </ion-col>
     <ion-col size="4" class="ion-align-self-center"> </ion-col>
   </ion-row>
+
   <ion-row class="row-traduction">
     <ion-col size="2">
       <div class="ion-text-uppercase ion-text-center">
@@ -67,7 +67,7 @@
       class="ion-text-uppercase ion-text-center"
     >
       <div class="ion-text-center">
-        <ion-button color="danger" routerLink="/donate" routerDirection="root">
+        <ion-button color="danger" (click)="openDonatePage()">
           <ion-icon slot="start" name="heart-outline"></ion-icon>
           {{ "MENU.Donate" | translate }}</ion-button
         >
@@ -111,6 +111,12 @@
   <ion-row id="navmenu" class="newheader ion-align-items-center">
     <ion-col size="12" class="ion-text-center mybtn">
       <ion-button
+        style="
+          border: 1px solid rgb(17, 17, 17);
+          border-top: none;
+          border-bottom: none;
+          border-right: none;
+        "
         (mouseenter)="closeSousMenu()"
         fill="clear"
         routerLink="/"
@@ -123,6 +129,11 @@
       </ion-button>
 
       <ion-button
+        style="
+          border: 1px solid rgb(17, 17, 17);
+          border-top: none;
+          border-bottom: none;
+        "
         #aboutbtn
         (click)="about_dropdown = !about_dropdown"
         (mouseleave)="hideAboutDropdown($event)"
@@ -137,6 +148,12 @@
       </ion-button>
 
       <ion-button
+        style="
+          border: 1px solid rgb(17, 17, 17);
+          border-top: none;
+          border-bottom: none;
+          border-left: none;
+        "
         (mouseenter)="closeSousMenu()"
         fill="clear"
         routerLink="/activity"
@@ -146,6 +163,12 @@
         {{ "MENU.Activity" | translate }}
       </ion-button>
       <ion-button
+        style="
+          border: 1px solid rgb(17, 17, 17);
+          border-top: none;
+          border-bottom: none;
+          border-left: none;
+        "
         (mouseenter)="closeSousMenu()"
         fill="clear"
         routerLink="/impact"

@@ -26,11 +26,12 @@ export class HeaderComponent implements OnInit {
   constructor(
     private translateConfigService: TranslateConfigService,
     public translate: TranslateService,
-    private router: Router
+    public router: Router
   ) {
     this.languageChanged();
     setTimeout(() => {
       // this.getBtnPosition();
+      console.log('log title', this.title);
     }, 1000);
   }
 
@@ -123,5 +124,11 @@ export class HeaderComponent implements OnInit {
   closeSousMenu() {
     console.log('hello');
     this.about_dropdown = false;
+  }
+  openDonatePage() {
+    let host =
+      window.location.protocol + '//' + window.location.host + '/donate';
+    console.log('host', host);
+    window.open(host);
   }
 }

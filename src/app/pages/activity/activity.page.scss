@@ -43,7 +43,7 @@ small {
 
 .row {
   margin-top: 2%;
-  border-bottom: 1px dashed #999797;
+  border-bottom: 1px dashed #f0ecec;
   .titre {
     text-align: center;
     text-transform: uppercase;
@@ -65,20 +65,11 @@ small {
   .titre {
     margin-bottom: 2%;
   }
-  @-moz-document url-prefix() {
-    .g2-activity {
-      position: relative;
-      bottom: 70px;
-    }
-    .container {
-      position: relative;
-      bottom: 80px;
-    }
-  }
+
   .selector:not(*:root),
   .g2-activity {
     position: relative;
-    bottom: 85px;
+    bottom: 60px;
   }
   .selector:not(*:root),
   .container {
@@ -88,4 +79,27 @@ small {
 }
 .card {
   border: none;
+}
+@-moz-document url-prefix() {
+  .g2-activity {
+    position: relative;
+    // bottom: 10px;
+  }
+  .container {
+    position: relative;
+    bottom: 50px;
+  }
+}
+.bg {
+  --background: #f1f1f1;
+}
+.add-color {
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.texte {
+  font-family: Arial, "New Roman", sans-serif;
 }

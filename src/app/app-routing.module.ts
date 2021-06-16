@@ -6,11 +6,15 @@ const routes: Routes = [
     path: '',
     loadChildren: () =>
       import('./pages/menu/menu.module').then((m) => m.MenuPageModule),
-  },  {
+  },
+  {
     path: 'footer',
     loadChildren: () => import('./pages/footer/footer.module').then( m => m.FooterPageModule)
   },
-
+ {
+    path: 'donate',
+    loadChildren: () => import('./pages/donate/donate.module').then( m => m.DonatePageModule)
+  },
 
   /* 
  {
@@ -40,10 +44,7 @@ const routes: Routes = [
     path: 'products',
     loadChildren: () => import('./pages/products/products.module').then( m => m.ProductsPageModule)
   },
-  {
-    path: 'donate',
-    loadChildren: () => import('./pages/donate/donate.module').then( m => m.DonatePageModule)
-  },
+ 
   {
     path: 'activity',
     loadChildren: () => import('./pages/activity/activity.module').then( m => m.ActivityPageModule)

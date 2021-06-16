@@ -40,119 +40,125 @@
     }
   }
 
-  @-moz-document url-prefix() {
-    .desktop .row-traduction {
-      position: relative;
-      bottom: 25px;
-      left: 58%;
-    }
-    ion-grid .last-row {
-      position: relative;
-      // bottom: 23px;
-      top: -20px;
-      padding: 0px;
-      margin: 0px;
-    }
-    .header1 {
-      position: relative;
-      top: 20px;
-      ion-col {
-        max-height: 10% !important;
-
-        div {
-          ion-button {
-            // height: 62px;
-
-            margin: 0px;
-            font-size: 10px;
-            font-weight: bold;
-          }
-          img {
-            height: 60% !important;
-            object-fit: cover;
-            width: 40% !important;
-          }
-        }
-      }
-    }
-    .logo-site {
-      position: relative;
-      bottom: 20px;
-    }
-
-    .phone {
-      position: relative;
-      top: 20px;
-    }
-    .newheader {
-      width: 100% !important;
-      margin: 0 0;
-      display: flex;
-      background-color: #f1f1f1;
-
-      border: 1px solid #3a3939;
-      position: relative;
-      top: -20px;
-      //bottom: 1px;
-      img {
-        //object-fit: fill;
-      }
-      .mybtn {
-        --ion-grid-padding: 0 0;
-        margin-bottom: 0px;
-        margin-top: 0px;
-        // max-height: 60px !important;
-        ion-button {
-          color: var(--ion-color-dark);
-          border: 1px solid black;
-          height: 40px !important;
-          position: relative;
-          bottom: 7px;
-          margin: 0px;
-          font-size: 10px;
-          font-weight: bold;
-          min-width: 8%;
-        }
-      }
-    }
-
-    #navmenu {
-      height: 40px !important;
-    }
-    .last-row {
-      position: relative;
-      top: -65px;
-    }
-    .btn-dropdown {
-      //  position: relative;
-      // top: 100px;
-      // left: var(--my-var);
-      z-index: 1;
-      div {
-        width: 100%;
-        // height: 110px;
-        background: #fff;
-        position: relative;
-        top: -50px;
-        left: 2%;
-        p {
-          font-size: 11px;
-          padding-bottom: 10px;
-          padding-top: 10px;
-
-          margin: auto;
-        }
-
-        p:hover {
-          color: var(--ion-color-primary);
-        }
-      }
-    }
-  }
-
   .btn-dropdown {
     top: 40px !important;
   }
+}
+
+@-moz-document url-prefix() {
+  .desktop .row-traduction {
+    position: relative;
+    bottom: 25px;
+    left: 58%;
+    // background-color: blueviolet;
+  }
+  ion-grid .last-row {
+    position: relative;
+    // bottom: 23px;
+    top: -20px;
+    padding: 0px;
+    margin: 0px;
+  }
+  .desktop .header1 {
+    position: relative;
+    top: 20px;
+    ion-col {
+      max-height: 10% !important;
+
+      div {
+        ion-button {
+          // height: 62px;
+
+          margin: 0px;
+          font-size: 10px;
+          font-weight: bold;
+        }
+        img {
+          height: 60% !important;
+          object-fit: cover;
+          width: 40% !important;
+        }
+      }
+    }
+  }
+  .logo-site {
+    position: relative;
+    bottom: 20px;
+  }
+
+  .phone {
+    position: relative;
+    top: 20px;
+  }
+  .newheader {
+    width: 100% !important;
+    margin: 0 0;
+    display: flex;
+    background-color: #f1f1f1;
+
+    border: 1px solid #3a3939;
+    position: relative;
+    top: -20px;
+    //bottom: 1px;
+    img {
+      //object-fit: fill;
+    }
+    .mybtn {
+      --ion-grid-padding: 0 0;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      // max-height: 60px !important;
+      ion-button {
+        color: var(--ion-color-dark);
+        border-left: 1px solid #f1f1f1;
+        border-right: 1px solid #f1f1f1;
+        height: 40px !important;
+        position: relative;
+        bottom: 7px;
+        margin: 0px;
+        font-size: 10px;
+        font-weight: bold;
+        min-width: 8%;
+      }
+    }
+  }
+
+  #navmenu {
+    height: 40px !important;
+  }
+  .last-row {
+    position: relative;
+    top: -65px;
+  }
+  .btn-dropdown {
+    //  position: relative;
+    // top: 100px;
+    // left: var(--my-var);
+    z-index: 1;
+    div {
+      width: 100%;
+      // height: 110px;
+      background: #fff;
+      position: relative;
+      top: -50px;
+      left: 2%;
+      p {
+        font-size: 11px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+
+        margin: auto;
+      }
+
+      p:hover {
+        color: var(--ion-color-primary);
+      }
+    }
+  }
+}
+
+.btn-dropdown {
+  top: 40px !important;
 }
 
 @media (max-width: 768px) {

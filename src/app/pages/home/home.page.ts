@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Animation, AnimationController } from '@ionic/angular';
 import { ImageLoaderService } from 'src/app/services/image-loader.service';
 import { SocialMediaService } from 'src/app/services/social-media.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
@@ -39,10 +40,15 @@ export class HomePage implements OnInit {
     this.coverAll = this.ImageLoader.getData();
     (this.chosenImage = '../../../assets/backg/2.jpg'),
       setInterval(() => {
-        this.chosenImage = this.backgroundImages[
+        /* this.chosenImage = this.backgroundImages[
+          Math.floor(Math.random() * this.backgroundImages.length)
+        ];*/
+        let url2 = this.backgroundImages[
           Math.floor(Math.random() * this.backgroundImages.length)
         ];
-      }, 30000);
+        // this.intAnimation(this.chosenImage, url2);
+        this.chosenImage = url2;
+      }, 10000);
   }
 
   ngOnInit() {}
@@ -65,25 +71,43 @@ export class HomePage implements OnInit {
     }, 500);*/
   }
 
-  intAnimation() {
+  intAnimation(url1, url2) {
     const squareB: Animation = this.animationCtrl
       .create()
 
       // .addElement(coastRef)
-      .addElement(document.querySelector('.hero'))
-      .duration(2000)
+      .addElement(document.querySelector('.home-main'))
+
+      .duration(1500)
       //.iterations(Infinity)
-      .fromTo('transform', 'translateX(0px)', 'translateX(100px)')
-      .fromTo('opacity', '1', '0.6');
-    const squareC: Animation = this.animationCtrl
-      .create()
+      // .fromTo('background-image', this.chosenImage, url2)
 
-      // .addElement(coastRef)
-      .addElement(document.querySelector('.hero'))
-      .duration(2000)
+      .keyframes([
+        {
+          offset: 0,
+          'background-image': url2,
+          transform: 'translateX(100px)',
+          opacity: '0.9',
+        },
+        {
+          offset: 0.5,
+          'background-image': this.chosenImage,
+          transform: 'translateX(0px)',
+          opacity: '1',
+        },
+      ]);
+    //.iterations(Infinity)  background-image: url('../../assets/BackgroundImages/splash-screen-background.png');
+    // .fromTo('transform', 'translateX(0px)', 'translateX(100px)')
+    // .fromTo('opacity', '1', '0.6');
+    // const squareC: Animation = this.animationCtrl
+    //  .create()
 
-      .fromTo('transform', 'translateX(100px)', 'translateX(0px)')
-      .fromTo('opacity', '0.6', '1');
+    // .addElement(coastRef)
+    // .addElement(document.querySelector('.hero'))
+    // .duration(2000)
+
+    // .fromTo('transform', 'translateX(100px)', 'translateX(0px)')
+    // .fromTo('opacity', '0.6', '1');
     // .fromTo('transform', 'translateX(5px)', 'translateX(0px)');
     /* .keyframes([
         { offset: 0, transform: 'scale(1)' },
@@ -92,9 +116,7 @@ export class HomePage implements OnInit {
       ]);*/
     squareB.play().then(() => {
       console.log('total coast load');
-      squareC.play().then(() => {
-        console.log('total coast load');
-      });
+      this.chosenImage = url2;
     });
   }
 

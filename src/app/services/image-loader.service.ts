@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { isNullOrUndefined } from 'util';
+//import { isNullOrUndefined } from 'util';
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +13,7 @@ export class ImageLoaderService {
   }
 
   getData() {
-    if (isNullOrUndefined(this.coverAll)) {
+    if (this.coverAll) {
       return 0;
     } else {
       return this.coverAll;

@@ -59,7 +59,6 @@
     ion-content {
       position: relative;
       bottom: 50px;
-      // --background: blueviolet;
     }
   }
 
@@ -69,7 +68,6 @@
     background-color: rgb(4, 4, 110);
   }
   .site-footer {
-    // position: absolute;
     bottom: 0px;
   }
   ion-footer {
@@ -157,7 +155,7 @@ h3 {
 .overview {
   position: relative;
   left: 25%;
-  // top: 500%;
+  top: 150%;
 }
 .footer-secondRow {
   padding: 20px;
@@ -167,4 +165,8 @@ h3 {
     color: white;
     text-decoration: none;
   }
+}
+small {
+  padding-left: 1px;
+  padding-right: 1px;
 }

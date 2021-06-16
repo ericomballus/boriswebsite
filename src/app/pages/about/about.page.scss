@@ -40,10 +40,22 @@ ion-item {
       position: relative;
       bottom: 70px;
     }
+    .taille-texte {
+      padding-left: 95px;
+      margin-top: 1px;
+    }
   }
 
   .g2-activity {
     position: relative;
     bottom: 70px;
+    margin-bottom: 70px;
   }
+}
+.texte {
+  font-family: Arial, "New Roman", sans-serif;
+}
+.taille-texte {
+  font-size: 20px;
+  font-family: serif;
 }

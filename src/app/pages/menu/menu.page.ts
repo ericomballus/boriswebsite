@@ -46,11 +46,11 @@ export class MenuPage implements OnInit {
       path: '/contacts',
     },
 
-    {
+    /* {
       title: 'Donation',
       icon: 'list',
       path: '/donate',
-    },
+    },*/
   ];
 
   title = 'Home';
