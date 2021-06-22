@@ -1,8 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Animation, AnimationController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
 import { ImageLoaderService } from 'src/app/services/image-loader.service';
 import { SocialMediaService } from 'src/app/services/social-media.service';
+import { TraductionService } from 'src/app/services/traduction.service';
+import { TranslateConfigService } from 'src/app/translate-config.service';
 
 @Component({
   selector: 'app-home',
@@ -35,7 +38,10 @@ export class HomePage implements OnInit {
     private http: HttpClient,
     private animationCtrl: AnimationController,
     public ImageLoader: ImageLoaderService,
-    public socialMedia: SocialMediaService
+    public socialMedia: SocialMediaService,
+    private translateConfigService: TranslateConfigService,
+    public translate: TranslateService,
+    private traduction: TraductionService
   ) {
     this.coverAll = this.ImageLoader.getData();
     (this.chosenImage = '../../../assets/backg/2.jpg'),
@@ -49,9 +55,19 @@ export class HomePage implements OnInit {
         // this.intAnimation(this.chosenImage, url2);
         this.chosenImage = url2;
       }, 10000);
+    this.languageChanged();
   }
 
   ngOnInit() {}
+
+  languageChanged() {
+    //this.translate.addLangs(['en', 'fr']);
+    // this.translate.use('en');
+    // this.translateConfigService.setLanguage('en');
+    this.traduction.getLanguage().subscribe((lang) => {
+      this.translateConfigService.setLanguage(lang);
+    });
+  }
 
   removeAllCover() {
     this.ImageLoader.setData();

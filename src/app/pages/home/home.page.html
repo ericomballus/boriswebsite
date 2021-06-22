@@ -1,4 +1,7 @@
-<ion-content class="desktop">
+<ion-content
+  class="desktop"
+  style="padding-bottom: 0px; margin-bottom: 0px; background-color: blueviolet"
+>
   <div class="content">
     <ion-grid>
       <ion-row
@@ -8,9 +11,11 @@
         <ion-col size="12" class="home-main-col1">
           <div class="ion-text-uppercase ion-text-center">
             <div class="home-main-div-section">
-              global association of health and humanitarian care
+              {{"MENU.Texte2" | translate}}
             </div>
-            <ion-button class="textedumilieu">STOP CERVICAL CANCER</ion-button>
+            <ion-button class="textedumilieu"
+              >{{"MENU.Texte3" | translate}}</ion-button
+            >
           </div>
         </ion-col>
       </ion-row>
@@ -23,9 +28,9 @@
                 src="../../../assets/boris/sensibilisation cancer.jpeg"
               />
               <p>
-                <a routerLink="/activity"> sensibilisation on cervical cancer</a
+                <a routerLink="/activity"> {{"MENU.Texte4" | translate}}</a
                 ><br />
-                <small> more information about...</small>
+                <small> {{"MENU.Texte5" | translate}}</small>
               </p>
             </div>
           </div>
@@ -37,8 +42,9 @@
                 src="../../../assets/boris/IMG-20210519-WA0030.jpg"
               />
               <p>
-                <a routerLink="/activity"> free screening for children</a><br />
-                <small> more information about...</small>
+                <a routerLink="/activity"> {{"MENU.Texte6" | translate}}</a
+                ><br />
+                <small> {{"MENU.Texte5" | translate}}</small>
               </p>
             </div>
           </div>
@@ -50,9 +56,9 @@
                 src="../../../assets/boris/WhatsApp Image 2021-05-24 at 11.52.51.jpeg"
               />
               <p>
-                <a routerLink="/activity">free cervical cancer screening</a
+                <a routerLink="/activity">{{"MENU.Texte7" | translate}}</a
                 ><br />
-                <small> more information about...</small>
+                <small> {{"MENU.Texte5" | translate}}</small>
               </p>
             </div>
           </div>
@@ -64,9 +70,9 @@
                 src="../../../assets/boris/consultation (3).jpg"
               />
               <p>
-                <a routerLink="/activity">free ophtalmologic consultation</a
+                <a routerLink="/activity">{{"MENU.Texte8" | translate}}</a
                 ><br />
-                <small> more information about...</small>
+                <small>{{"MENU.Texte5" | translate}}</small>
               </p>
             </div>
           </div>
@@ -76,26 +82,31 @@
       <ion-row>
         <ion-col size="12">
           <div class="ion-text-center">
-            <h2>Get information now</h2>
+            <h2>{{"MENU.Texte9" | translate}}</h2>
           </div>
         </ion-col>
         <ion-col>
-          <div class="ion-text-center ion-text-lowercase ion-text-center">
-            <h4>Cancer information and resources</h4>
-            <small style="text-transform: uppercase"
+          <div
+            class="ion-text-center ion-text-center"
+            style="text-transform: none"
+          >
+            <h4>{{"MENU.Texte10" | translate}}</h4>
+            <small style="text-transform: uppercase; font-weight: 900"
               >G.A.H.H.C &nbsp;&nbsp;</small
-            >advocates for health and humanisation care registered N° :
+            >
+
+            {{"MENU.Texte11" | translate}} : 00002285
           </div>
         </ion-col>
       </ion-row>
     </ion-grid>
   </div>
-  <ion-footer>
+  <ion-footer style="padding-bottom: 0px; margin-bottom: 0px">
     <ion-toolbar color="dark">
       <ion-row class="footer-row">
         <ion-col sizeLg="2" sizeMd="2" sizeSm="12" sizeXs="12">
           <ion-button style="color: white" fill="clear">
-            JOIN US ON:
+            {{"MENU.Textefooter" | translate}}:
           </ion-button></ion-col
         >
         <ion-col sizeLg="1" sizeMd="1" sizeSm="6" sizeXs="6">
@@ -218,10 +229,7 @@
           class="ion-align-self-center"
         >
           <div class="ion-text-center">
-            <p>
-              © 2021 GAHHC, Inc. All rights reserved. The GAHHC is a qualified
-              501(c)(3) tax-exempt organization.
-            </p>
+            <p>{{"MENU.Textefooter2" | translate}}.</p>
           </div>
         </ion-col>
       </ion-row>
@@ -238,95 +246,110 @@
         class="home-main"
         [ngStyle]="{'background-image': chosenImage ? ' url( '+ chosenImage + ')' : ''}"
       >
-        <ion-col size="12" class="home-main-col1">
-          <div class="ion-text-uppercase ion-text-center">
-            <div class="home-main-div-section">
-              global association of health and humanitarian care
+        <ion-col size="12">
+          <div
+            class="ion-text-uppercase ion-text-center"
+            style="margin-top: 20px"
+          >
+            <div
+              class="home-main-div-section"
+              style="color: white; font-weight: 900"
+            >
+              {{"MENU.Texte2" | translate}}
             </div>
-            <ion-button class="textedumilieu">STOP CERVICAL CANCER</ion-button>
+            <ion-button class="textedumilieu"
+              >{{"MENU.Texte3" | translate}}</ion-button
+            >
           </div>
         </ion-col>
       </ion-row>
-      <div class="div-inner">
-        <div class="home-main-col2">
-          <div class="container1 col-4 col-sm-6 col-md-6">
-            <div class="image">
-              <img
-                class="container_img"
-                src="../../../assets/boris/sensibilisation cancer.jpeg"
-              />
-              <p>
-                <a routerLink="/activity"> sensibilisation on cervical cancer</a
-                ><br />
-                <small> more information about...</small>
-              </p>
-            </div>
-          </div>
-
-          <div class="container1 col-sm-6 col-md-6">
-            <div class="image">
-              <img
-                class="container_img"
-                src="../../../assets/boris/IMG-20210519-WA0030.jpg"
-              />
-              <p>
-                <a routerLink="/activity"> Free screening for children</a><br />
-                <small> more information about...</small>
-              </p>
-            </div>
-          </div>
-
-          <div class="container1 col-sm-6 col-md-6">
-            <div class="image">
-              <img
-                class="container_img"
-                src="../../../assets/boris/WhatsApp Image 2021-05-24 at 11.52.51.jpeg"
-              />
-              <p>
-                <a routerLink="/activity">free cervical cancer screening</a
-                ><br />
-                <small> more information about...</small>
-              </p>
-            </div>
-          </div>
-
-          <div class="container1 col-sm-6 col-md-6">
-            <div class="image">
-              <img
-                class="container_img"
-                src="../../../assets/boris/consultation (3).jpg"
-              />
-              <p>
-                <a routerLink="/activity">free ophtalmologie consultation</a
-                ><br />
-                <small> more information about...</small>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <ion-row>
-        <ion-col size="12">
+        <ion-col sizeMd="6" sizeSm="6" sizeXs="6">
+          <div style="display: flex; justify-content: center">
+            <img
+              style="width: 100px; height: 100px; clip-path: ellipse(50% 50%)"
+              src="../../../assets/boris/sensibilisation cancer.jpeg"
+            />
+          </div>
+          <div style="display: inline-block; text-align: center">
+            <p>
+              <a routerLink="/activity" style="color: black">
+                {{"MENU.Texte4" | translate}}</a
+              ><br />
+              <small> {{"MENU.Texte5" | translate}}</small>
+            </p>
+          </div>
+        </ion-col>
+        <ion-col sizeMd="6" sizeSm="6" sizeXs="6">
+          <div style="display: flex; justify-content: center">
+            <img
+              style="width: 100px; height: 100px; clip-path: ellipse(50% 50%)"
+              src="../../../assets/boris/IMG-20210519-WA0030.jpg"
+            />
+          </div>
+          <div style="display: inline-block; text-align: center">
+            <p>
+              <a routerLink="/activity" style="color: black">
+                {{"MENU.Texte6" | translate}}</a
+              ><br />
+              <small> {{"MENU.Texte5" | translate}}</small>
+            </p>
+          </div>
+        </ion-col>
+        <ion-col sizeMd="6" sizeSm="6" sizeXs="6">
+          <div style="display: flex; justify-content: center">
+            <img
+              style="width: 100px; height: 100px; clip-path: ellipse(50% 50%)"
+              src="../../../assets/boris/WhatsApp Image 2021-05-24 at 11.52.51.jpeg"
+            />
+          </div>
+          <div style="display: inline-block; text-align: center">
+            <p>
+              <a routerLink="/activity" style="color: black"
+                >{{"MENU.Texte7" | translate}}</a
+              ><br />
+              <small> {{"MENU.Texte5" | translate}}</small>
+            </p>
+          </div>
+        </ion-col>
+        <ion-col sizeMd="6" sizeSm="6" sizeXs="6">
+          <div style="display: flex; justify-content: center">
+            <img
+              style="width: 100px; height: 100px; clip-path: ellipse(50% 50%)"
+              src="../../../assets/boris/consultation (3).jpg"
+            />
+          </div>
+          <div style="display: inline-block; text-align: center">
+            <p>
+              <a routerLink="/activity" style="color: black"
+                >{{"MENU.Texte8" | translate}}</a
+              ><br />
+              <small> {{"MENU.Texte5" | translate}}</small>
+            </p>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col sizeLg="12" sizeMd="12" sizeSm="12" sizeXs="12">
           <div class="ion-text-center">
-            <h2>Get information now</h2>
+            <h2>{{"MENU.Texte9" | translate}}</h2>
           </div>
         </ion-col>
         <ion-col>
           <div class="ion-text-center ion-text-lowercase ion-text-center">
-            <h4>Cancer information and resources</h4>
-            G.A.H.H.C advocates for health and humanisation care registered N° :
+            <h4>{{"MENU.Texte10" | translate}}</h4>
+            G.A.H.H.C {{"MENU.Texte11" | translate}} : 00002285
           </div>
         </ion-col>
       </ion-row>
     </ion-grid>
   </div>
-  <ion-footer>
+  <ion-footer style="padding-bottom: 0px; margin-bottom: 0px">
     <ion-toolbar color="dark">
       <ion-row class="footer-row">
         <ion-col sizeLg="2" sizeMd="2" sizeSm="12" sizeXs="12">
           <ion-button style="color: white" fill="clear">
-            JOIN US ON:
+            {{"MENU.Textefooter" | translate}}:
           </ion-button></ion-col
         >
         <ion-col sizeLg="1" sizeMd="1" sizeSm="6" sizeXs="6">
@@ -366,7 +389,6 @@
           </ion-button></ion-col
         >
 
-        <ion-col sizeLg="1" sizeMd="1" sizeSm="6" sizeXs="6"> </ion-col>
         <ion-col sizeLg="1" sizeMd="1" sizeSm="6" sizeXs="6">
           <ion-button
             style="color: white"
@@ -377,21 +399,22 @@
             TEL:+237 699 641 013
           </ion-button>
         </ion-col>
+        <ion-col sizeLg="1" sizeMd="1" sizeSm="6" sizeXs="6"> </ion-col>
       </ion-row>
       <ion-row class="footer-secondRow" style="text-align: center">
         <ion-col
           sizeLg="1"
           sizeMd="1"
-          sizeSm="12"
-          sizeXs="12"
+          sizeSm="6"
+          sizeXs="6"
           class="ion-align-self-center"
           ><a href="">HELP</a></ion-col
         >
         <ion-col
           sizeLg="1"
           sizeMd="1"
-          sizeSm="12"
-          sizeXs="12"
+          sizeSm="6"
+          sizeXs="6"
           class="ion-align-self-center"
         >
           <a href="">SITE MAP</a>
@@ -399,8 +422,8 @@
         <ion-col
           sizeLg="1"
           sizeMd="1"
-          sizeSm="12"
-          sizeXs="12"
+          sizeSm="6"
+          sizeXs="6"
           class="ion-align-self-center"
         >
           <a href="">PRIVACY POLICY</a>
@@ -408,8 +431,8 @@
         <ion-col
           sizeLg="1"
           sizeMd="1"
-          sizeSm="12"
-          sizeXs="12"
+          sizeSm="6"
+          sizeXs="6"
           class="ion-align-self-center"
         >
           <a href="">ACCESSIBILITY</a>
@@ -417,8 +440,8 @@
         <ion-col
           sizeLg="1"
           sizeMd="1"
-          sizeSm="12"
-          sizeXs="12"
+          sizeSm="6"
+          sizeXs="6"
           class="ion-align-self-center"
         >
           <a href="">TERMS OF USE</a>
@@ -426,8 +449,8 @@
         <ion-col
           sizeLg="1"
           sizeMd="1"
-          sizeSm="12"
-          sizeXs="12"
+          sizeSm="6"
+          sizeXs="6"
           class="ion-align-self-center"
         >
           <a href="">STATE FUNDRAISING</a>
@@ -435,8 +458,8 @@
         <ion-col
           sizeLg="1"
           sizeMd="1"
-          sizeSm="12"
-          sizeXs="12"
+          sizeSm="6"
+          sizeXs="6"
           class="ion-align-self-center"
         >
           <a href="">SITE COMMENTS</a>
@@ -444,15 +467,12 @@
         <ion-col
           sizeLg="5"
           sizeMd="8"
-          sizeSm="12"
-          sizeXs="12"
+          sizeSm="6"
+          sizeXs="6"
           class="ion-align-self-center"
         >
           <div class="ion-text-center">
-            <p>
-              © 2021 GAHHC, Inc. All rights reserved. The GAHHC is a qualified
-              501(c)(3) tax-exempt organization.
-            </p>
+            <p>{{"MENU.Textefooter2" | translate}}.</p>
           </div>
         </ion-col>
       </ion-row>

@@ -1,5 +1,8 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { MenuController, Platform } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
+import { TraductionService } from 'src/app/services/traduction.service';
+import { TranslateConfigService } from 'src/app/translate-config.service';
 
 @Component({
   selector: 'app-menu',
@@ -9,7 +12,7 @@ import { MenuController, Platform } from '@ionic/angular';
 export class MenuPage implements OnInit {
   menuItems = [
     {
-      title: 'Home',
+      title: 'MENU.Home',
       icon: 'home',
       path: '/',
     },
@@ -19,7 +22,7 @@ export class MenuPage implements OnInit {
       path: '/products',
     },*/
     {
-      title: 'About us',
+      title: 'MENU.About',
       icon: 'list',
       path: '/about',
     },
@@ -31,13 +34,13 @@ export class MenuPage implements OnInit {
     },
 
     {
-      title: 'Activities',
+      title: 'MENU.Activity',
       icon: 'list',
       path: '/activity',
     },
     {
-      title: 'Impact',
-      icon: 'information',
+      title: 'MENU.Impact',
+      icon: 'list',
       path: '/impact',
     },
     {
@@ -54,17 +57,32 @@ export class MenuPage implements OnInit {
   ];
 
   title = 'Home';
-
-  constructor(private menuCtrl: MenuController, private plt: Platform) {}
+  selectedLanguage: string;
+  constructor(
+    private menuCtrl: MenuController,
+    private plt: Platform,
+    private traduction: TraductionService,
+    private translateConfigService: TranslateConfigService,
+    public translate: TranslateService
+  ) {}
   ngOnInit() {
     const width = this.plt.width();
     this.toggleMenu(width);
+    this.languageChanged();
   }
 
   @HostListener('window:resize', ['$event'])
   private onResize(event) {
     const newWidth = event.target.innerWidth;
     this.toggleMenu(newWidth);
+  }
+
+  languageChanged() {
+    this.translate.addLangs(['en', 'fr']);
+    this.translate.use('en');
+    /*if (lang) {
+      this.translateConfigService.setLanguage(lang);
+    } */
   }
 
   toggleMenu(width) {
@@ -77,5 +95,14 @@ export class MenuPage implements OnInit {
 
   setTitle(title) {
     this.title = title;
+  }
+
+  selectLanguage(ev) {
+    this.menuCtrl.close();
+    console.log(ev.target.value);
+    let val = ev.target.value;
+
+    this.translateConfigService.setLanguage(val);
+    this.traduction.setLanguage(val);
   }
 }

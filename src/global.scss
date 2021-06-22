@@ -29,6 +29,43 @@
   .desktop {
     display: none;
   }
+  ion-content {
+    --padding-top: 90px;
+    // --padding-start: 200px;
+    // display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .desktop {
+    display: none;
+  }
+  ion-content {
+    --padding-top: 60px;
+    //--padding-start: 200px;
+    // display: none;
+  }
+}
+
+@media (max-width: 512px) {
+  .desktop {
+    display: none;
+  }
+  ion-content {
+    --padding-top: 40px;
+    //--padding-start: 200px;
+    // display: none;
+  }
+}
+@media (max-width: 512px) {
+  .desktop {
+    display: none;
+  }
+  ion-content {
+    --padding-top: 23px;
+    //--padding-start: 200px;
+    // display: none;
+  }
 }
 
 @media (min-width: 768px) {
@@ -58,7 +95,7 @@
   @-moz-document url-prefix() {
     ion-content {
       position: relative;
-      bottom: 50px;
+      // bottom: 50px;
     }
   }
 

@@ -1,19 +1,27 @@
 <ion-header class="mobile-header">
-  <ion-toolbar color="ligth">
+  <ion-toolbar color="dark" style="align-items: center">
     <ion-buttons slot="start">
       <ion-menu-button menu="myMenu"></ion-menu-button>
     </ion-buttons>
-    <ion-title class="logo-mobile"
-      ><ion-img src="../../../assets/logosite.jpg"></ion-img>
+    <ion-title>
+      <div style="width: 100%; height: 100%">
+        <img
+          style="width: 100%; height: 50px"
+          src="../../../assets/newlogo.jpeg"
+        />
+      </div>
     </ion-title>
-    <ion-button
-      slot="end"
-      color="danger"
-      (click)="router.navigateByUrl('/donate')"
-    >
-      <ion-icon slot="start" name="heart-outline"></ion-icon>
-      {{ "MENU.Donate" | translate }}</ion-button
-    >
+    <ion-buttons slot="end">
+      <!--
+        <ion-button fill="outline" color="danger">
+        GIVE IN HONOR & MEMORIAL</ion-button
+      >
+     -->
+      <ion-button color="danger" (click)="openDonatePage()">
+        <ion-icon slot="start" name="heart-outline"></ion-icon>
+        {{ "MENU.Donate" | translate }}</ion-button
+      >
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -45,10 +53,11 @@
         </div>
       </div>
     </ion-col>
-    <ion-col size="5" class="logo-site">
-      <div class="ion-text-center mballus">
-        <img src="../../../assets/logosite.jpg" />
-      </div>
+    <ion-col size="5" class="logo-site" style="height: 85px">
+      <img
+        style="object-fit: contain; width: 100%; height: -100vh"
+        src="../../../assets/newlogo.jpeg"
+      />
     </ion-col>
     <ion-col size="4" class="ion-align-self-center"> </ion-col>
   </ion-row>
@@ -108,7 +117,7 @@
     </ion-col>
   </ion-row>
 
-  <ion-row id="navmenu" class="newheader ion-align-items-center">
+  <ion-row id="navmenu" class="newheader">
     <ion-col size="12" class="ion-text-center mybtn">
       <ion-button
         style="
@@ -196,8 +205,9 @@
           [queryParams]="{ category: 'overview' }"
           lines="none"
           routerDirection="root"
+          style="text-transform: uppercase"
         >
-          OVERVIEW
+          {{ "MENU.overview" | translate }}
         </p>
         <p
           text-center
@@ -206,8 +216,9 @@
           [queryParams]="{ category: 'our-team' }"
           lines="none"
           routerDirection="root"
+          style="text-transform: uppercase"
         >
-          OUR TEAM
+          {{ "MENU.ourteam" | translate }}
         </p>
       </div>
     </ion-col>

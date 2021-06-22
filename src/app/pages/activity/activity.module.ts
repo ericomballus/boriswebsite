@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { ActivityPageRoutingModule } from './activity-routing.module';
 
 import { ActivityPage } from './activity.page';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ActivityPageRoutingModule
+    ActivityPageRoutingModule,
+    TranslateModule.forChild(),
   ],
-  declarations: [ActivityPage]
+  declarations: [ActivityPage],
 })
 export class ActivityPageModule {}

@@ -2,6 +2,7 @@ import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { TranslateConfigService } from '../../translate-config.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
+import { TraductionService } from 'src/app/services/traduction.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -26,7 +27,8 @@ export class HeaderComponent implements OnInit {
   constructor(
     private translateConfigService: TranslateConfigService,
     public translate: TranslateService,
-    public router: Router
+    public router: Router,
+    private traduction: TraductionService
   ) {
     this.languageChanged();
     setTimeout(() => {
@@ -37,7 +39,6 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {}
   languageChanged() {
-    let lang = localStorage.getItem('language');
     this.translate.addLangs(['en', 'fr']);
     this.translate.use('en');
     /*if (lang) {
@@ -66,6 +67,7 @@ export class HeaderComponent implements OnInit {
   selectLanguage(value) {
     this.dropdown = false;
     this.translateConfigService.setLanguage(value);
+    this.traduction.setLanguage(value);
     localStorage.setItem('language', value);
     if (value == 'fr') {
       this.FR = true;
@@ -126,9 +128,14 @@ export class HeaderComponent implements OnInit {
     this.about_dropdown = false;
   }
   openDonatePage() {
-    let host =
-      window.location.protocol + '//' + window.location.host + '/donate';
-    console.log('host', host);
-    window.open(host);
+    this.traduction.getLanguage().subscribe((lang) => {
+      let host =
+        window.location.protocol +
+        '//' +
+        window.location.host +
+        `/donate?language=${lang}`;
+      console.log('host', host);
+      window.open(host);
+    });
   }
 }

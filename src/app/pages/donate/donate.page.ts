@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { ICreateOrderRequest, IPayPalConfig } from 'ngx-paypal';
 import { SocialMediaService } from 'src/app/services/social-media.service';
+import { TraductionService } from 'src/app/services/traduction.service';
+import { TranslateConfigService } from 'src/app/translate-config.service';
 @Component({
   selector: 'app-donate',
   templateUrl: './donate.page.html',
@@ -9,12 +13,26 @@ import { SocialMediaService } from 'src/app/services/social-media.service';
 export class DonatePage implements OnInit {
   public payPalConfig?: IPayPalConfig;
   title = 'simple-bootstarp-validation-angular';
-  constructor(public socialMedia: SocialMediaService) {}
+  constructor(
+    public socialMedia: SocialMediaService,
+    private translateConfigService: TranslateConfigService,
+    public translate: TranslateService,
+    private traduction: TraductionService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
+    this.route.queryParams.subscribe((params) => {
+      console.log(params); // { orderby: "price" }
+      this.languageChanged(params['language']);
+    });
     this.initConfig();
   }
-
+  languageChanged(lang) {
+    // this.translate.addLangs(['en', 'fr']);
+    // this.translate.use('en');
+    this.translateConfigService.setLanguage(lang);
+  }
   private initConfig(): void {
     this.payPalConfig = {
       currency: 'EUR',

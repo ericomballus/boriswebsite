@@ -7,3 +7,13 @@ ion-grid {
 
 ion-router-outlet {
 }
+
+@-moz-document url-prefix() {
+  ion-app {
+    ion-router-outlet {
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+      // background-color: yellow;
+    }
+  }
+}

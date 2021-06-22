@@ -32,24 +32,28 @@
     <div class="jumbotron">
       <div class="main-first-div">
         <h2 class="title-h2" style="font-size: 14px">
-          Cancer screening save lives
+          {{"MENU.donate1" | translate}}
         </h2>
       </div>
       <div class="container">
         <div>
           <p class="text-center title-h2" style="font-size: 11px">
-            DONATION AMOUNT
+            {{"MENU.donate2" | translate}}
           </p>
         </div>
         <form class="needs-validation">
           <div style="text-align: left" class="form-group text-left div-border">
-            <label for="uname">Frequency:</label>
+            <label for="uname">{{"MENU.donate3" | translate}}:</label>
             <div class="mybtn-form">
               <div>
-                <ion-button expand="full">One Time</ion-button>
+                <ion-button expand="full"
+                  >{{"MENU.donate4" | translate}}</ion-button
+                >
               </div>
               <div>
-                <ion-button color="dark" expand="full">Monthly</ion-button>
+                <ion-button color="dark" expand="full"
+                  >{{"MENU.donate5" | translate}}</ion-button
+                >
               </div>
             </div>
           </div>
@@ -58,7 +62,7 @@
             style="text-align: left"
             class="form-group text-left div-border amountflex"
           >
-            <label for="uname">Amount:</label>
+            <label for="uname">{{"MENU.donate6" | translate}}:</label>
             <input
               type="text"
               class="form-control"
@@ -67,7 +71,7 @@
               required
               style="border: 0.2px solid #2e2c2c"
             />
-            <div class="valid-feedback">Valid montant.</div>
+            <div class="valid-feedback">{{"MENU.donate7" | translate}} .</div>
             <div class="invalid-feedback">Please fill out this field.</div>
           </div>
 
@@ -76,7 +80,7 @@
             (click)="validate()"
             class="btn btn-primary btn-lg"
           >
-            SAVES
+            {{"MENU.donate9" | translate}}
           </button>
         </form>
       </div>

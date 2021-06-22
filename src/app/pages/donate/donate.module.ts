@@ -8,6 +8,7 @@ import { DonatePageRoutingModule } from './donate-routing.module';
 
 import { DonatePage } from './donate.page';
 import { NgxPayPalModule } from 'ngx-paypal';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { NgxPayPalModule } from 'ngx-paypal';
     IonicModule,
     DonatePageRoutingModule,
     NgxPayPalModule,
+    TranslateModule.forChild(),
   ],
   declarations: [DonatePage],
 })

@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { ImpactPageRoutingModule } from './impact-routing.module';
 
 import { ImpactPage } from './impact.page';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ImpactPageRoutingModule
+    ImpactPageRoutingModule,
+    TranslateModule.forChild(),
   ],
-  declarations: [ImpactPage]
+  declarations: [ImpactPage],
 })
 export class ImpactPageModule {}
